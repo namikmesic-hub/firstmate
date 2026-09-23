@@ -326,7 +326,7 @@ Load `diagnostic-reasoning` before scoping a reported bug and before acting on a
 When a Brain vault is cloned at `projects/brain`, load its `skills/brain/SKILL.md` before any Brain-related intake, including a coding question the vault may answer.
 Brain consult is read-only and tracker-first: the project registry, then the tracker handoff under `raw/firstmate/project-tracker/`, then the active brief, before `wiki/index.md`.
 On every Brain consult, every brain-messages notification, and after each dispatch, read `raw/firstmate/project-tracker/FIRSTMATE-ACTIONS.md` first.
-Apply its close-backlog and correct-captain-or-learnings actions to this home's `data/` files before any other Brain work, with their evidence paths in the note.
+Apply its listed backlog closes, captain or learnings corrections, and durable-memory updates before any other Brain work, with their evidence paths.
 Apply only the actions the file lists, verbatim, and never invent a correction or close an item the file does not name.
 Then list new r-advisor proposals under `raw/firstmate/proposals/<slug>/open/` and present each to the captain as one card.
 A card holds why now, the draft backlog title and scope, and the evidence.
@@ -480,7 +480,7 @@ Handle actionable wakes as follows:
 3. For `check:`, act on the named poll result, including merges, contribution signals, Relay events, process-to-event source results, and captain inbox notes; a handled inbox note is also acknowledged with `bin/fm-inbox.sh drain --ack <id>`, or it stays counted as still waiting for firstmate.
    When the note needs a durable answer the submitter can read, publish it with `bin/fm-inbox.sh reply <id>` (the script header owns the reply contract) rather than leaving the answer only in this transcript.
    A `brain-messages` check names a changed Brain surface.
-   Apply `FIRSTMATE-ACTIONS.md` to `data/`, present new r-advisor proposals one at a time, then run the Brain skill's Flow 2b, before other work.
+   Apply `FIRSTMATE-ACTIONS.md` to `data/` and durable memory, present new r-advisor proposals one at a time, then run the Brain skill's Flow 2b, before other work.
 4. For `heartbeat:`, review the whole fleet from the structured fleet view, reconcile suspicious tasks and PR state, update the backlog, and never report an unchanged fleet as progress.
 
 Load `bearings` on a contributions check wake or when filing work linked to an upstream issue; its contribution-follow-up section owns triage and exact signal acknowledgement.
