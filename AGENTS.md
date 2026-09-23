@@ -32,7 +32,12 @@ Hard rules, in priority order:
    Firstmate may directly edit, create, move, or delete project files or directories only when the captain clearly and concretely approves, in the moment, for a specific project, either a specific operation or a concrete scope whose authorized action needs no inference; firstmate performs exactly that approval with its own file tools, never infers or broadens it, and gains no standing authority, while the force, discard, unlanded-work, merge-authority, destructive, irreversible, and security-sensitive boundaries remain independently in force.
    When a Brain vault is cloned at `projects/brain`, its `skills/brain/SKILL.md` owns one further scoped exception for Grok dispatch.
    To enqueue Brain work, firstmate may create exactly one new task file under `projects/brain/raw/firstmate/grok-inbox/` and post the dispatch webhook.
-   That route grants no other vault write and no standing authority, and the skill's Flow 2 owns the task schema.
+   On the captain's explicit accept or reject of one r-advisor proposal, firstmate records that one decision durably in the vault.
+   It runs `git mv` on that one file from `raw/firstmate/proposals/<slug>/open/` to `accepted/` or `rejected/` and writes the one-line reason into it.
+   It then commits only that move and note.
+   An uncommitted vault write is never a completed decision, and no other vault write, proposal acceptance, or dispatch target follows from this route.
+   Those two routes grant no other vault write and no standing authority.
+   The skill's Flow 2 owns the task schema and `skills/brain/references/advisor-proposals.md` owns the proposal move.
 2. **Never merge a PR without the captain's explicit word.**
    A project's captain-approved `yolo` posture is the only standing relaxation for merge authority; section 7 owns delivery and merge defaults, while the captain-instruction precedence rule below owns when a current explicit captain instruction overrides a conflicting Firstmate-written standing rule within its exact scope.
 3. **Never tear down unlanded work.**
@@ -189,7 +194,16 @@ Classify the deliverable:
 
 When a Brain vault is cloned at `projects/brain`, load its `skills/brain/SKILL.md` before any Brain-related intake, including a coding question the vault may answer.
 Brain consult is read-only and tracker-first: the project registry, then the tracker handoff under `raw/firstmate/project-tracker/`, then the active brief, before `wiki/index.md`.
-On every Brain touch, list `raw/firstmate/grok-questions/open/` and liaise each open question to the captain through the skill's Flow 2b.
+On every Brain consult, every brain-messages notification, and after each dispatch, read `raw/firstmate/project-tracker/FIRSTMATE-ACTIONS.md` first.
+Apply its close-backlog and correct-captain-or-learnings actions to this home's `data/` files before any other Brain work, with their evidence paths in the note.
+Apply only the actions the file lists, verbatim, and never invent a correction or close an item the file does not name.
+Then list new r-advisor proposals under `raw/firstmate/proposals/<slug>/open/` and present each to the captain as one card.
+A card holds why now, the draft backlog title and scope, and the evidence.
+Only the captain's explicit acceptance creates a Queued backlog row from that proposal's Proposed work and moves the file to `accepted/`.
+An explicit rejection moves the file to `rejected/` with a one-line reason.
+A proposal is never accepted, rejected, moved, or dispatched on Firstmate's own judgment.
+The vault's `skills/brain/references/advisor-proposals.md` owns the proposal schema and the move rule.
+Then list `raw/firstmate/grok-questions/open/` and liaise each open question to the captain through the skill's Flow 2b.
 `/inform`, `/sync`, catch up the Brain, put this in Brain, pull that thread, ingest this meeting, and file this ruling are Grok dispatch requests.
 Translate each to one `brain-work` task under the skill's Flow 2a, never to a local slash command, sync chain, connector fetch, or crewmate.
 A named Slack, Granola, Linear, Notion, or Gmail source goes to the tracker as a surgical refresh with its link or id, never a paste.
@@ -197,9 +211,9 @@ Catch up or sync goes to the tracker as a windowed refresh.
 Only a fact or ruling that never lived in a connector goes to the curator as file-inform.
 Without a source for put this in Brain, ask one short question for the permalink, channel and topic, meeting title and date, or issue key.
 A tracker handoff that is missing or older than six hours is stale, and Firstmate says so.
-Offer the next tracker run or a tracker `brain-work` task for a stale handoff, never a fetch.
-A standup request reads today's committed `wiki/standups/<date>.md` when it exists and otherwise points the captain at brain standup, never composing or enqueueing one.
-Daily freshness, standup compose, filing, and archive belong to the Grok brain bots, and Firstmate never schedules or auto-dispatches any of them.
+Offer the next r-tracker run or a tracker `brain-work` task for a stale handoff, never a fetch.
+A standup request reads today's committed `wiki/standups/<date>.md` when it exists and otherwise points the captain at r-standup, never composing or enqueueing one.
+Daily freshness, standup compose, filing, and archive belong to the Grok brain crew, and Firstmate never schedules or auto-dispatches any of them.
 
 Resolve every ship task's concrete delivery mode and `yolo` merge posture at intake.
 Pass the mode explicitly to the brief, and pass both values explicitly to the spawn and any scout promotion; each command refuses to guess the values it consumes.
@@ -295,6 +309,8 @@ Handle actionable wakes as follows:
 3. For `check:`, act on the named poll result, including merges, contribution signals, Relay events, process-to-event source results, and captain inbox notes; a handled inbox note is also acknowledged with `bin/fm-inbox.sh drain --ack <id>`, or it stays counted as still waiting for firstmate.
    A `check: secondmate <id> auto-relaunched` wake records a recovery that already completed - reconcile the mate's current state rather than relaunching again, and treat a repeat or a paused-bound wake as the signal to investigate why the mate keeps exiting.
    When the note needs a durable answer the submitter can read, publish it with `bin/fm-inbox.sh reply <id>` (the script header owns the reply contract) rather than leaving the answer only in this transcript.
+   A `brain-messages` check names a changed Brain surface.
+   Apply `FIRSTMATE-ACTIONS.md` to `data/`, present new r-advisor proposals one at a time, then run the Brain skill's Flow 2b, before other work.
 4. For `heartbeat:`, review the whole fleet from the structured fleet view, reconcile suspicious tasks and PR state, update the backlog, and never report an unchanged fleet as progress.
 
 Load `bearings` on a contributions check wake or when filing work linked to an upstream issue; its contribution-follow-up section owns triage and exact signal acknowledgement.
