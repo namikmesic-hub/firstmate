@@ -7,6 +7,9 @@
 #   fm-brain-messages-check.sh --help
 #
 # `check` prints one line when Brain surfaces need Firstmate attention, else silent.
+# A new or changed outbox result with nothing else actionable wakes exactly once,
+# because firstmate-brain-watch.md has Firstmate read new dispatch results; the
+# next check with the same surfaces stays silent.
 # Arm registers state/brain-messages.check.sh with fm-check-register.sh (same trust
 # model as tool-updates). Read-only on the vault; Firstmate applies data/ fixes.
 set -u
@@ -45,6 +48,14 @@ cap_line() {
   printf '%s…' "${s:0:$((MAX_LINE - 1))}"
 }
 
+stamp_files() {
+  # NUL-separated paths on stdin -> one "name#mtime" line per file; BSD stat first, GNU stat as the fallback.
+  local f
+  while IFS= read -r -d '' f; do
+    stat -f '%N#%m' "$f" 2>/dev/null || stat -c '%n#%Y' "$f" 2>/dev/null || printf '%s#?\n' "$f"
+  done
+}
+
 fingerprint_tree() {
   # Stable fingerprint of watched Brain surfaces.
   local actions="$BRAIN_ROOT/raw/firstmate/project-tracker/FIRSTMATE-ACTIONS.md"
@@ -73,7 +84,7 @@ fingerprint_tree() {
   local out_fp=""
   if [ -d "$out_dir" ]; then
     out_fp=$(find "$out_dir" -maxdepth 1 -type f -name '*.md' -print0 2>/dev/null \
-      | xargs -0 stat -f '%N#%m' 2>/dev/null | sort | cksum | awk '{print $1"-"$2}')
+      | stamp_files | sort | cksum | awk '{print $1"-"$2}')
   fi
   fp="${fp}outbox:${out_fp:-none};"
 
@@ -82,7 +93,7 @@ fingerprint_tree() {
   if [ -d "$prop_dir" ]; then
     n_prop=$(find "$prop_dir" -type f -path '*/open/*.md' 2>/dev/null | wc -l | tr -d ' ')
     prop_fp=$(find "$prop_dir" -type f -path '*/open/*.md' -print0 2>/dev/null \
-      | xargs -0 stat -f '%N#%m' 2>/dev/null | sort | cksum | awk '{print $1"-"$2}')
+      | stamp_files | sort | cksum | awk '{print $1"-"$2}')
   fi
   fp="${fp}proposals:${n_prop}:${prop_fp:-none};"
   printf '%s' "$fp"
@@ -174,6 +185,15 @@ do_check() {
   fi
 
   if [ "$actionable" -eq 0 ]; then
+    # Nothing to apply, answer, or present. A changed outbox still carries a new
+    # dispatch result Firstmate has not read, so wake once for it; then latch.
+    local outbox_now outbox_rec
+    outbox_now=$(printf '%s' "$fp" | sed -n 's/.*outbox:\([^;]*\);.*/\1/p')
+    outbox_rec=$(printf '%s' "$RECORD_FP" | sed -n 's/.*outbox:\([^;]*\);.*/\1/p')
+    if [ -n "$RECORD_FP" ] && [ "$outbox_now" != "$outbox_rec" ]; then
+      line=$(cap_line "brain messages: $findings")
+      printf '%s\n' "$line"
+    fi
     record_write "$fp" || true
     return 0
   fi
