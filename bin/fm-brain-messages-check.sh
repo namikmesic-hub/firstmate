@@ -76,6 +76,15 @@ fingerprint_tree() {
       | xargs -0 stat -f '%N#%m' 2>/dev/null | sort | cksum | awk '{print $1"-"$2}')
   fi
   fp="${fp}outbox:${out_fp:-none};"
+
+  local prop_dir="$BRAIN_ROOT/raw/firstmate/proposals"
+  local prop_fp="" n_prop=0
+  if [ -d "$prop_dir" ]; then
+    n_prop=$(find "$prop_dir" -type f -path '*/open/*.md' 2>/dev/null | wc -l | tr -d ' ')
+    prop_fp=$(find "$prop_dir" -type f -path '*/open/*.md' -print0 2>/dev/null \
+      | xargs -0 stat -f '%N#%m' 2>/dev/null | sort | cksum | awk '{print $1"-"$2}')
+  fi
+  fp="${fp}proposals:${n_prop}:${prop_fp:-none};"
   printf '%s' "$fp"
 }
 
@@ -103,7 +112,15 @@ summarize() {
     parts="${parts}${n_open} grok-questions open; "
   fi
 
-  # Outbox: only mention if fingerprint moved; caller decides newsiness.
+  local n_prop=0
+  local prop_dir="$BRAIN_ROOT/raw/firstmate/proposals"
+  if [ -d "$prop_dir" ]; then
+    n_prop=$(find "$prop_dir" -type f -path '*/open/*.md' 2>/dev/null | wc -l | tr -d ' ')
+  fi
+  if [ "$n_prop" -gt 0 ]; then
+    parts="${parts}${n_prop} proposals open; "
+  fi
+
   if [ -n "$parts" ]; then
     printf '%s' "$parts"
   else
@@ -144,6 +161,12 @@ do_check() {
   local n_open=0
   [ -d "$open_dir" ] && n_open=$(find "$open_dir" -maxdepth 1 -type f -name '*.json' 2>/dev/null | wc -l | tr -d ' ')
   if [ "$n_open" -gt 0 ]; then actionable=1; fi
+  local n_prop=0
+  local prop_dir="$BRAIN_ROOT/raw/firstmate/proposals"
+  if [ -d "$prop_dir" ]; then
+    n_prop=$(find "$prop_dir" -type f -path '*/open/*.md' 2>/dev/null | wc -l | tr -d ' ')
+  fi
+  if [ "$n_prop" -gt 0 ]; then actionable=1; fi
   if [ -f "$actions" ] && ! grep -q '^status: clear' "$actions" 2>/dev/null; then
     if grep -qE '^## (Close backlog|Correct captain|Other|Open grok)' "$actions" 2>/dev/null; then
       actionable=1
