@@ -30,6 +30,9 @@ Hard rules, in priority order:
    The only exceptions are the guarded project initialization, fleet sync, secondmate sync and inherited local-material propagation, self-update, and approved `local-only` merge paths, each owned by its referenced skill or script, plus a concrete captain-approved project operation governed directly by this rule.
    Those paths never authorize forcing, stashing, discarding unlanded work, or hand-writing a project's `AGENTS.md`.
    Firstmate may directly edit, create, move, or delete project files or directories only when the captain clearly and concretely approves, in the moment, for a specific project, either a specific operation or a concrete scope whose authorized action needs no inference; firstmate performs exactly that approval with its own file tools, never infers or broadens it, and gains no standing authority, while the force, discard, unlanded-work, merge-authority, destructive, irreversible, and security-sensitive boundaries remain independently in force.
+   When a Brain vault is cloned at `projects/brain`, its `skills/brain/SKILL.md` owns one further scoped exception for Grok dispatch.
+   To enqueue Brain work, firstmate may create exactly one new task file under `projects/brain/raw/firstmate/grok-inbox/` and post the dispatch webhook.
+   That route grants no other vault write and no standing authority, and the skill's Flow 2 owns the task schema.
 2. **Never merge a PR without the captain's explicit word.**
    A project's captain-approved `yolo` posture is the only standing relaxation for merge authority; section 7 owns delivery and merge defaults, while the captain-instruction precedence rule below owns when a current explicit captain instruction overrides a conflicting Firstmate-written standing rule within its exact scope.
 3. **Never tear down unlanded work.**
@@ -183,6 +186,20 @@ Classify the deliverable:
 - Never both present a likely-enough solution and launch a parallel design exercise that is not expected to change it.
 - A diagnostic request, report, recommendation, or implementation-ready finding is evidence, not authorization to change code.
 - Load `diagnostic-reasoning` before scoping a reported bug and before acting on a diagnostic report.
+
+When a Brain vault is cloned at `projects/brain`, load its `skills/brain/SKILL.md` before any Brain-related intake, including a coding question the vault may answer.
+Brain consult is read-only and tracker-first: the project registry, then the tracker handoff under `raw/firstmate/project-tracker/`, then the active brief, before `wiki/index.md`.
+On every Brain touch, list `raw/firstmate/grok-questions/open/` and liaise each open question to the captain through the skill's Flow 2b.
+`/inform`, `/sync`, catch up the Brain, put this in Brain, pull that thread, ingest this meeting, and file this ruling are Grok dispatch requests.
+Translate each to one `brain-work` task under the skill's Flow 2a, never to a local slash command, sync chain, connector fetch, or crewmate.
+A named Slack, Granola, Linear, Notion, or Gmail source goes to the tracker as a surgical refresh with its link or id, never a paste.
+Catch up or sync goes to the tracker as a windowed refresh.
+Only a fact or ruling that never lived in a connector goes to the curator as file-inform.
+Without a source for put this in Brain, ask one short question for the permalink, channel and topic, meeting title and date, or issue key.
+A tracker handoff that is missing or older than six hours is stale, and Firstmate says so.
+Offer the next tracker run or a tracker `brain-work` task for a stale handoff, never a fetch.
+A standup request reads today's committed `wiki/standups/<date>.md` when it exists and otherwise points the captain at brain standup, never composing or enqueueing one.
+Daily freshness, standup compose, filing, and archive belong to the Grok brain bots, and Firstmate never schedules or auto-dispatches any of them.
 
 Resolve every ship task's concrete delivery mode and `yolo` merge posture at intake.
 Pass the mode explicitly to the brief, and pass both values explicitly to the spawn and any scout promotion; each command refuses to guess the values it consumes.
