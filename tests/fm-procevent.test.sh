@@ -3096,6 +3096,10 @@ printf 'garbage that is not a session block\n' > "$SIL"
 silent_says no "an unreadable result fails closed and is announced"
 printf 'session:\n  file: /a.html\n  status: ended\n  ended_by: user\nfeedback[1]{text}:\n  prompts[0]{x}:\n' > "$SIL"
 silent_says no "indented payload text cannot forge an empty content block"
+printf 'session:\n  file: /a.html\n  status: ended\n  ended_by: user\nprompts[1]:\n  - uid: "1"\n    tag: choice\n    text: late answer\n' > "$SIL"
+silent_says no "an ended session carrying a list-shape content block is never assumed empty"
+printf 'session:\n  file: /a.html\n  status: ended\n  ended_by: user\nprompts[0]:\n' > "$SIL"
+silent_says no "a declared-empty list-shape content block is still present"
 # A content check that cannot complete is not proof that nothing was said. Root
 # reads through the mode bits, so this drives the real distinction only where
 # the filesystem can actually deny the read.
@@ -3387,6 +3391,199 @@ assert_contains "$out" "SESSION-ENDING MESSAGE: (none)" \
   "an empty board close invented a session-ending message"
 assert_contains "$out" "ANNOTATIONS: (none)" "an empty board close invented annotations"
 pass "read distinguishes a feedback capture from an ended-with-nothing close"
+
+# Lavish frames a large round in a second published shape: a `prompts[N]:`
+# header followed by one `- uid:` item per queued element, with one
+# `key: value` line per field and a deeper-indented nested block under a
+# text-range annotation. tests/captures/lavish-axi-0.1.78/ holds a captured
+# round of each shape; its README owns the provenance. On 2026-10-13 the
+# 48-item round below read as zero items, so none of its answers reached the
+# keyed-answer intake.
+CAPTURES="$ROOT/tests/captures/lavish-axi-0.1.78"
+out=$("$ROOT/bin/fm-procevent-lavish.sh" read "$CAPTURES/prompts-list-48.result") \
+  || fail "read failed on the captured list-shape round"
+assert_contains "$out" "declared_items: 48" "the list-shape round lost its declared count"
+assert_contains "$out" "presented_items: 48" "the list-shape round was not fully presented"
+assert_contains "$out" "malformed_items: 0" "a well-formed list-shape item was reported malformed"
+assert_contains "$out" "complete: yes" "a complete list-shape round was not marked complete"
+assert_contains "$out" "annotation_count: 48" "list-shape annotations were miscounted"
+assert_contains "$out" "captain_message_count: 0" "a list-shape annotation was mistaken for a message"
+assert_contains "$out" $'element_uid: 38\nelement_selector: div#root > section:nth-of-type(30)\ntag: text\ntext:\n| Sample element text 3\nprompt:\n| Sample comment 3 line one.\n| Sample comment 3 line two.\n' \
+  "a text-range annotation lost its element, its tag, or the two lines of its quoted comment"
+assert_contains "$out" $'tag: h3\ntext:\n| Sample element text 4, with a comma\nprompt:\n| Sample comment 4 with a "quoted" word\n' \
+  "a quoted scalar carrying an escaped quote and a comma was not decoded"
+assert_contains "$out" $'tag: p\ntext:\n| Sample element text 1\nprompt:\n| Sample comment 1\n' \
+  "a plain scalar was not read verbatim"
+assert_not_contains "$out" "text-range" "a nested target block leaked into the presentation"
+assert_not_contains "$out" "commonAncestorSelector" "a nested target field was presented as an item field"
+assert_not_contains "$out" "Context data:" "a list-shape choice surfaced its context as a comment"
+assert_contains "$out" "END LAVISH RESULT (48 of 48)" "the list-shape footer did not report the full round"
+pass "read presents every item of a captured list-shape round"
+
+out=$("$ROOT/bin/fm-procevent-lavish.sh" answers "$CAPTURES/prompts-list-48.result") \
+  || fail "answers failed on the captured list-shape round"
+[ "$(printf '%s\n' "$out" | wc -l | tr -d ' ')" = 41 ] \
+  || fail "the list-shape round did not yield its 41 keyed answers: $out"
+assert_contains "$out" $'sample-call-04\toption-c\tSample question 4 -> option-c\trelease' \
+  "a list-shape choice lost its selection, label, or close mode"
+assert_contains "$out" $'sample-call-01\tSample note 1, with a comma\tSample question 1 -> Sample note 1, with a comma' \
+  "a note-only list-shape answer was dropped"
+assert_contains "$out" $'sample-call-42\toption-w\t' "the last list-shape choice was not read"
+assert_not_contains "$out" "sample-call-22" "a list-shape reconcile selection leaked into keyed answers"
+out=$("$ROOT/bin/fm-procevent-lavish.sh" reconciles "$CAPTURES/prompts-list-48.result") \
+  || fail "reconciles failed on the captured list-shape round"
+[ "$out" = $'sample-call-22\tSample note 12' ] \
+  || fail "the list-shape round lost or invented a reconcile selection: $out"
+pass "answers and reconciles read every keyed choice of a captured list-shape round"
+
+out=$("$ROOT/bin/fm-procevent-lavish.sh" read "$CAPTURES/prompts-table-18.result") \
+  || fail "read failed on the captured table-shape round"
+assert_contains "$out" "presented_items: 18" "the table-shape round was not fully presented"
+assert_contains "$out" "complete: yes" "a complete table-shape round was not marked complete"
+assert_contains "$out" $'tag: h3\ntext:\n| Sample element text 1\nprompt:\n| Sample comment 1\n' \
+  "a table row with plain fields was not read verbatim"
+assert_contains "$out" $'tag: p\ntext:\n| Sample element text 3\nprompt:\n| Sample comment 3 line one.\n| Sample comment 3 line two.\n' \
+  "a quoted multi-line comment in a table row was not decoded"
+out=$("$ROOT/bin/fm-procevent-lavish.sh" answers "$CAPTURES/prompts-table-18.result") \
+  || fail "answers failed on the captured table-shape round"
+[ "$(printf '%s\n' "$out" | wc -l | tr -d ' ')" = 6 ] \
+  || fail "the table-shape round did not collapse its ten choice rows to six keyed answers: $out"
+assert_contains "$out" $'sample-call-01\toption-a\tSample question 1 -> option-a\trelease' \
+  "a table-shape choice lost its selection, label, or close mode"
+out=$("$ROOT/bin/fm-procevent-lavish.sh" reconciles "$CAPTURES/prompts-table-18.result") \
+  || fail "reconciles failed on the captured table-shape round"
+[ "$out" = $'sample-call-03\nsample-call-04' ] \
+  || fail "the table-shape round lost or invented a reconcile selection: $out"
+pass "the captured table-shape round still reads as before"
+
+# One round in both published shapes must read identically: the same
+# presentation, the same keyed answers, and the same reconcile selections.
+TWIN_TABLE="$TMP_ROOT/twin-table-result"
+TWIN_LIST="$TMP_ROOT/twin-list-result"
+cat > "$TWIN_TABLE" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[5]{uid,prompt,selector,tag,text}:
+  "1","Captain's Call answer - Ship it?: go - keep the title\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-ship\",\n  \"selection\": \"go\",\n  \"note\": \"keep the title\",\n  \"close\": \"release\"\n}","section#ship > form",choice,"Ship it? -> go - keep the title"
+  "2","Captain's Call answer - Still current?: reconcile - re-check\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-current\",\n  \"selection\": \"reconcile\",\n  \"note\": \"re-check\"\n}","section#current > form",choice,"Still current? -> reconcile - re-check"
+  "3","First line, with a comma.\nSecond line says \"quoted\".","section#notes > p",p,Plain element text
+  "4",Short remark,"section#range",text,"Range text: the selection"
+  "","closing words, before the end","",message,Freeform message
+next_step: This was the last feedback before the user ended the session.
+EOF
+cat > "$TWIN_LIST" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[5]:
+  - uid: "1"
+    prompt: "Captain's Call answer - Ship it?: go - keep the title\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-ship\",\n  \"selection\": \"go\",\n  \"note\": \"keep the title\",\n  \"close\": \"release\"\n}"
+    selector: "section#ship > form"
+    tag: choice
+    text: Ship it? -> go - keep the title
+  - uid: "2"
+    prompt: "Captain's Call answer - Still current?: reconcile - re-check\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-current\",\n  \"selection\": \"reconcile\",\n  \"note\": \"re-check\"\n}"
+    selector: "section#current > form"
+    tag: choice
+    text: Still current? -> reconcile - re-check
+  - uid: "3"
+    prompt: "First line, with a comma.\nSecond line says \"quoted\"."
+    selector: "section#notes > p"
+    tag: p
+    text: Plain element text
+  - uid: "4"
+    prompt: Short remark
+    selector: "section#range"
+    tag: text
+    text: "Range text: the selection"
+    target:
+      type: text-range
+      text: "Range text: the selection"
+      selector: "section#range"
+      start:
+        selector: "section#range > h3"
+        path[1]: 0
+        offset: 0
+      end:
+        selector: "section#range > p"
+        path: []
+        offset: 0
+  - uid: ""
+    prompt: "closing words, before the end"
+    selector: ""
+    tag: message
+    text: Freeform message
+next_step: This was the last feedback before the user ended the session.
+EOF
+for command in read answers reconciles; do
+  table_out=$("$ROOT/bin/fm-procevent-lavish.sh" "$command" "$TWIN_TABLE") \
+    || fail "$command failed on the table-shape twin"
+  list_out=$("$ROOT/bin/fm-procevent-lavish.sh" "$command" "$TWIN_LIST") \
+    || fail "$command failed on the list-shape twin"
+  [ "$table_out" = "$list_out" ] \
+    || fail "$command read the two shapes of one round differently:
+--- table
+$table_out
+--- list
+$list_out"
+done
+# The shared verdict is a full one, not an equal emptiness.
+out=$("$ROOT/bin/fm-procevent-lavish.sh" read "$TWIN_LIST") || fail "read failed on the list-shape twin"
+assert_contains "$out" "presented_items: 5" "the twin round was not fully presented"
+assert_contains "$out" "complete: yes" "the twin round was not marked complete"
+assert_contains "$out" "session_ending_message_count: 1" "the twin round lost its session-ending message"
+assert_contains "$out" "| closing words, before the end" "the twin message body was dropped"
+assert_contains "$out" $'| First line, with a comma.\n| Second line says "quoted".' \
+  "the twin comment escapes were not decoded"
+assert_contains "$out" $'tag: text\ntext:\n| Range text: the selection\nprompt:\n| Short remark\n' \
+  "the twin text-range annotation lost its plain comment"
+[ "$("$ROOT/bin/fm-procevent-lavish.sh" answers "$TWIN_LIST")" = $'twin-ship\tgo\tShip it? -> go - keep the title\trelease' ] \
+  || fail "the twin round did not yield its one keyed answer"
+[ "$("$ROOT/bin/fm-procevent-lavish.sh" reconciles "$TWIN_LIST")" = $'twin-current\tre-check' ] \
+  || fail "the twin round did not yield its one reconcile selection"
+pass "both published shapes of one round read identically"
+
+cat > "$READ" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+prompts[3]:
+  - uid: "1"
+    prompt: "an unterminated quoted comment
+    selector: "section#a"
+    tag: p
+    text: First element
+  - uid: "2"
+    prompt: ""
+    selector: "section#b"
+    tag: p
+    text: Second element
+    a stray line that is neither a field nor nested content
+  - uid: "3"
+    prompt: ""
+    selector: "section#c"
+    tag: p
+    text: Third element
+  - uid: "4"
+    prompt: ""
+    selector: "section#d"
+    tag: p
+    text: Fourth element beyond the declared count
+EOF
+out=$(read_out) || fail "read failed on a list-shape capture containing malformed items"
+assert_contains "$out" "declared_items: 3" "a malformed list-shape capture lost its declared count"
+assert_contains "$out" "presented_items: 1" "a malformed list-shape item was certified as presented"
+assert_contains "$out" "malformed_items: 2" "malformed list-shape items were not reported"
+assert_contains "$out" "complete: no" "a malformed list-shape capture was certified as complete"
+assert_contains "$out" "| Third element" "a valid item beside malformed ones was not presented"
+assert_not_contains "$out" "First element" "an item with an unterminated quoted scalar was presented"
+assert_not_contains "$out" "Fourth element" "an item beyond the declared count was presented"
+pass "read never certifies malformed list-shape items as complete"
 
 # The runner's silence seam is generic and closed by default: an adapter with no
 # `silent` command must keep announcing, so adding the seam changed nothing for

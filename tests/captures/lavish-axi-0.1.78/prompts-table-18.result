@@ -1,0 +1,24 @@
+session:
+  file: /home/captain/.lavish/sample-board.html
+  status: feedback
+prompts[18]{uid,prompt,selector,tag,text}:
+  "1","Captain's Call answer - Sample question 1: option-a\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-01\",\n  \"selection\": \"option-a\",\n  \"note\": \"\",\n  \"close\": \"release\"\n}","div#root > section:nth-of-type(1) > form",choice,Sample question 1 -> option-a
+  "3","Captain's Call answer - Sample question 2, with a comma: option-b\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-02\",\n  \"selection\": \"option-b\",\n  \"note\": \"\",\n  \"close\": \"release\"\n}","div#root > section:nth-of-type(2) > form",choice,"Sample question 2, with a comma -> option-b"
+  "1","Captain's Call answer - Sample question 1: option-a\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-01\",\n  \"selection\": \"option-a\",\n  \"note\": \"\",\n  \"close\": \"release\"\n}","div#root > section:nth-of-type(1) > form",choice,Sample question 1 -> option-a
+  "2","Captain's Call answer - Sample question 2, with a comma: option-b\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-02\",\n  \"selection\": \"option-b\",\n  \"note\": \"\",\n  \"close\": \"release\"\n}","div#root > section:nth-of-type(2) > form",choice,"Sample question 2, with a comma -> option-b"
+  "3",Sample comment 1,"div#root > section:nth-of-type(3) > h3",h3,Sample element text 1
+  "5","Captain's Call answer - Sample question 3: with a colon: reconcile\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-03\",\n  \"selection\": \"reconcile\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(3) > form",choice,"Sample question 3: with a colon -> reconcile"
+  "6","Sample comment 2, with a comma","div#root > section:nth-of-type(4) > form > div",div,"Sample element text 2, with a comma"
+  "7","Captain's Call answer - Sample question 4: reconcile\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-04\",\n  \"selection\": \"reconcile\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(4) > form",choice,Sample question 4 -> reconcile
+  "8","Captain's Call answer - Sample question 5, with a comma: option-c\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-05\",\n  \"selection\": \"option-c\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(5) > form",choice,"Sample question 5, with a comma -> option-c"
+  "9","Sample comment 3 line one.\nSample comment 3 line two.","div#root > section:nth-of-type(6) > p:nth-of-type(1)",p,Sample element text 3
+  "10","Sample comment 4 with a \"quoted\" word","div#root > section:nth-of-type(7) > p:nth-of-type(1)",p,"Sample element text 4, with a comma"
+  "11","Captain's Call answer - Sample question 6: with a colon: option-d\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-06\",\n  \"selection\": \"option-d\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(8) > form",choice,"Sample question 6: with a colon -> option-d"
+  "12","Captain's Call answer - Sample question 7: option-e\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-07\",\n  \"selection\": \"option-e\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(9) > form",choice,Sample question 7 -> option-e
+  "15",Sample comment 5,"div#root > section:nth-of-type(10) > p:nth-of-type(2)",p,Sample element text 5
+  "16","Captain's Call answer - Sample question 8, with a comma: option-f\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-08\",\n  \"selection\": \"option-f\",\n  \"note\": \"\"\n}","div#root > section:nth-of-type(11) > form",choice,"Sample question 8, with a comma -> option-f"
+  "17","Sample comment 6, with a comma","div#root > section:nth-of-type(12) > p:nth-of-type(1)",p,"Sample element text 6, with a comma"
+  "18","Sample comment 7 line one.\nSample comment 7 line two.","div#root > section:nth-of-type(12) > p:nth-of-type(2)",p,Sample element text 7
+  "19","Sample comment 8 with a \"quoted\" word","div#root > section:nth-of-type(13) > h3",h3,"Sample element text 8, with a comma"
+next_step: "Apply the requested changes to /home/captain/.lavish/sample-board.html, then run the published poll again."
+dom_snapshot: "uid=1 body \"Sample board\"\n  uid=2 main \"Sample board\""

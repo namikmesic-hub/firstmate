@@ -553,6 +553,10 @@
       "audience": "maintainer-verification"
     },
     {
+      "path": "tests/captures/lavish-axi-0.1.78/README.md",
+      "audience": "maintainer-verification"
+    },
+    {
       "path": ".agents/skills/agent-skill-trigger-index/SKILL.md",
       "audience": "agent-runtime"
     },
