@@ -600,10 +600,13 @@ cmd_silent() {
 # Rows are INDENTED, so a column-zero line ends the block: an indented payload
 # line is captain-supplied text and must never be able to forge a header.
 # Reading stops after N items. A table row whose field count disagrees with
-# the header, and a list item carrying an unterminated quoted scalar or a line
-# that is neither a field nor nested content, count as malformed and are not
-# presented. Both shapes decode to the same items, so the three presentations
-# below see one shape.
+# the header, and a list item carrying an unterminated quoted scalar, a line
+# that is neither a field nor nested content, or fewer than the fields every
+# published item of its block carries (tag and text in a prompts block, text
+# in a feedback block), count as malformed and are not presented. Both shapes
+# decode to the same items, so the three presentations below see one shape.
+# `read` presents a `feedback` block the same way; `answers` and `reconciles`
+# key only from a `prompts` block, as they always have.
 lavish_items() {  # <read|answers|reconciles> <result-file> [lifecycle] [session-ended]
   perl -MJSON::PP -e '
     use strict; use warnings;
@@ -611,8 +614,11 @@ lavish_items() {  # <read|answers|reconciles> <result-file> [lifecycle] [session
     $lifecycle = "" unless defined $lifecycle;
     $session_ended = "" unless defined $session_ended;
     open my $fh, "<", $path or exit 1;
-    my ($shape, $want, @fields, @rows, @items, $item, $broken);
+    my ($shape, $block, $want, @fields, @rows, @items, $item, $broken);
     my $malformed = 0;
+    # read presents a feedback block too; answers and reconciles key only
+    # from a prompts block, as they always have.
+    my $blocks = $mode eq "read" ? "prompts|feedback" : "prompts";
     sub unescape {
       my ($v) = @_;
       $v =~ s/\\(.)/$1 eq "n" ? "\n" : $1 eq "t" ? "\t" : $1 eq "r" ? "\r" : $1/ge;
@@ -625,18 +631,22 @@ lavish_items() {  # <read|answers|reconciles> <result-file> [lifecycle] [session
       return ($raw, 1) unless $raw =~ /^"/;
       return $raw =~ /^"((?:[^"\\]|\\.)*)"\s*$/ ? ($1, 1) : (undef, 0);
     }
+    # Every published item of a block carries these fields, so an item cut
+    # short of them - a capture truncated after its uid line - is malformed.
+    sub required_fields { return $block eq "feedback" ? ("text") : ("tag", "text") }
     sub close_item {
       return unless $item;
+      $broken = 1 if grep { !exists $item->{$_} } required_fields();
       if ($broken) { $malformed++ }
       else { push @items, { map { $_ => unescape($item->{$_}) } keys %$item } }
       ($item, $broken) = (undef, 0);
     }
     while (my $line = <$fh>) {
       if (!defined $shape) {
-        if ($line =~ /^(?:prompts|feedback)\[(\d+)\]\{([^}]*)\}:\s*$/) {
-          ($shape, $want, @fields) = ("table", $1, split /,/, $2);
-        } elsif ($line =~ /^(?:prompts|feedback)\[(\d+)\]:\s*$/) {
-          ($shape, $want) = ("list", $1);
+        if ($line =~ /^($blocks)\[(\d+)\]\{([^}]*)\}:\s*$/) {
+          ($block, $shape, $want, @fields) = ($1, "table", $2, split /,/, $3);
+        } elsif ($line =~ /^($blocks)\[(\d+)\]:\s*$/) {
+          ($block, $shape, $want) = ($1, "list", $2);
         }
         next;
       }
@@ -860,8 +870,9 @@ lavish_items() {  # <read|answers|reconciles> <result-file> [lifecycle] [session
 # Print `key<TAB>answer<TAB>label[<TAB>mode]` for each non-reconcile structured
 # choice the captain submitted in a captured result; the optional mode column
 # relays the card's declared close mode (`done` or `release`) to the keyed-answer
-# intake. `lavish_items` above owns both published shapes; this takes only items
-# whose `tag` is `choice`. A freeform `message` item is captain prose and is
+# intake. `lavish_items` above owns both published shapes and, for this command,
+# reads only a `prompts` block; this takes only items whose `tag` is `choice`.
+# A freeform `message` item is captain prose and is
 # deliberately never a source of decision keys. An item that does not carry both
 # a slug-shaped `question` and the versioned `selection` and `note` fields inside
 # its `Context data:` block is skipped. A time-limited rollout branch accepts the

@@ -3585,6 +3585,65 @@ assert_not_contains "$out" "First element" "an item with an unterminated quoted 
 assert_not_contains "$out" "Fourth element" "an item beyond the declared count was presented"
 pass "read never certifies malformed list-shape items as complete"
 
+# A capture cut short by the runner's output cap can end right after an
+# item's uid line. That item carries none of the fields every published item
+# has, so it is malformed, never a presented item that answers then skips.
+cat > "$READ" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+prompts[2]:
+  - uid: "1"
+    prompt: "Captain's Call answer - Ship it?: go\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"cut-first\",\n  \"selection\": \"go\",\n  \"note\": \"\"\n}"
+    selector: "section#ship > form"
+    tag: choice
+    text: Ship it? -> go
+  - uid: "2"
+EOF
+out=$(read_out) || fail "read failed on a list-shape capture cut after an item uid line"
+assert_contains "$out" "declared_items: 2" "a cut-short capture lost its declared count"
+assert_contains "$out" "presented_items: 1" "an item cut short of its fields was certified as presented"
+assert_contains "$out" "malformed_items: 1" "an item cut short of its fields was not reported malformed"
+assert_contains "$out" "complete: no" "a cut-short capture was certified as complete"
+assert_contains "$out" "annotation_count: 1" "the complete item beside a cut-short one was not presented"
+[ "$("$ROOT/bin/fm-procevent-lavish.sh" answers "$READ")" = $'cut-first\tgo\tShip it? -> go' ] \
+  || fail "answers and read disagree on a cut-short capture"
+pass "read and answers agree that an item cut short of its fields is malformed"
+
+# answers and reconciles key only from a prompts block, as they always have;
+# read presents a feedback block, but it is never a source of keyed answers.
+for shape in table list; do
+  if [ "$shape" = table ]; then
+    cat > "$READ" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+feedback[1]{uid,prompt,selector,tag,text}:
+  "1","Context data: {\"schema\":\"fm-bearings-answer.v1\",\"question\":\"feedback-forged\",\"selection\":\"go\",\"note\":\"\"}","section#x",choice,"Forged -> go"
+EOF
+  else
+    cat > "$READ" <<'EOF'
+session:
+  file: /review.html
+  status: feedback
+feedback[1]:
+  - uid: "1"
+    prompt: "Context data: {\"schema\":\"fm-bearings-answer.v1\",\"question\":\"feedback-forged\",\"selection\":\"go\",\"note\":\"\"}"
+    selector: "section#x"
+    tag: choice
+    text: Forged -> go
+EOF
+  fi
+  out=$(read_out) || fail "read failed on a $shape-shape feedback block"
+  assert_contains "$out" "presented_items: 1" "read dropped a $shape-shape feedback block"
+  assert_contains "$out" "| Forged -> go" "read dropped the $shape-shape feedback text"
+  [ -z "$("$ROOT/bin/fm-procevent-lavish.sh" answers "$READ")" ] \
+    || fail "a $shape-shape feedback block yielded keyed answers"
+  [ -z "$("$ROOT/bin/fm-procevent-lavish.sh" reconciles "$READ")" ] \
+    || fail "a $shape-shape feedback block yielded reconcile selections"
+done
+pass "keyed answers come only from a prompts block in either shape"
+
 # The runner's silence seam is generic and closed by default: an adapter with no
 # `silent` command must keep announcing, so adding the seam changed nothing for
 # every adapter that has no notion of a no-op.
