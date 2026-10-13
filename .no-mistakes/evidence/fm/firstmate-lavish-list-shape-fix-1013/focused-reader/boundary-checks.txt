@@ -1,0 +1,4 @@
+truncated-list: declared 48; presented 47; malformed 1; complete no; answers 40; reconciles 1
+feedback-missing-text: declared 1; presented 0; malformed 1; complete no; answers 0; reconciles 0
+feedback-choice-boundary: declared 1; presented 1; malformed 0; complete yes; answers 0; reconciles 0
+message-choice-boundary: declared 1; presented 1; malformed 0; complete yes; answers 0; reconciles 0

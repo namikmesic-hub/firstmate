@@ -1,0 +1,73 @@
+{
+  "table_round": {
+    "items": 1,
+    "recorded_answers": 1
+  },
+  "list_round": {
+    "items": 48,
+    "annotations": 47,
+    "message": 1,
+    "keyed_answers": 41,
+    "recorded_answers": 41,
+    "reconcile_requests": 1,
+    "forged_message_task_still_held": "lab-answer-44"
+  },
+  "recorded_tasks": [
+    "lab-answer-01",
+    "lab-answer-02",
+    "lab-answer-03",
+    "lab-answer-04",
+    "lab-answer-05",
+    "lab-answer-06",
+    "lab-answer-07",
+    "lab-answer-08",
+    "lab-answer-09",
+    "lab-answer-10",
+    "lab-answer-11",
+    "lab-answer-12",
+    "lab-answer-13",
+    "lab-answer-14",
+    "lab-answer-15",
+    "lab-answer-16",
+    "lab-answer-17",
+    "lab-answer-18",
+    "lab-answer-19",
+    "lab-answer-20",
+    "lab-answer-21",
+    "lab-answer-22",
+    "lab-answer-23",
+    "lab-answer-24",
+    "lab-answer-25",
+    "lab-answer-26",
+    "lab-answer-27",
+    "lab-answer-28",
+    "lab-answer-29",
+    "lab-answer-30",
+    "lab-answer-31",
+    "lab-answer-32",
+    "lab-answer-33",
+    "lab-answer-34",
+    "lab-answer-35",
+    "lab-answer-36",
+    "lab-answer-37",
+    "lab-answer-38",
+    "lab-answer-39",
+    "lab-answer-40",
+    "lab-answer-41",
+    "lab-answer-42"
+  ],
+  "live_truncation": {
+    "cap_bytes": 952,
+    "declared_items": 3,
+    "presented_items": 2,
+    "malformed_items": 1,
+    "complete": false,
+    "recorded_answer": "lab-answer-44",
+    "incomplete_answer_still_held": "lab-answer-45"
+  },
+  "live_shape_equality": {
+    "read": "byte-identical",
+    "answers": "byte-identical",
+    "reconciles": "byte-identical"
+  }
+}

@@ -1,0 +1,12 @@
+session:
+  file: /review.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[5]{uid,prompt,selector,tag,text}:
+  "1","Captain's Call answer - Ship it?: go - keep the title\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-ship\",\n  \"selection\": \"go\",\n  \"note\": \"keep the title\",\n  \"close\": \"release\"\n}","section#ship > form",choice,"Ship it? -> go - keep the title"
+  "2","Captain's Call answer - Still current?: reconcile - re-check\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-current\",\n  \"selection\": \"reconcile\",\n  \"note\": \"re-check\"\n}","section#current > form",choice,"Still current? -> reconcile - re-check"
+  "3","First line, with a comma.\nSecond line says \"quoted\".","section#notes > p",p,Plain element text
+  "4",Short remark,"section#range",text,"Range text: the selection"
+  "","closing words, before the end","",message,Freeform message
+next_step: This was the last feedback before the user ended the session.

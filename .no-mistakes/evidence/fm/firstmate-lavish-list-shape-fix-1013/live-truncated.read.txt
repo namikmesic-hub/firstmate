@@ -1,0 +1,28 @@
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 3
+presented_items: 2
+malformed_items: 1
+complete: no
+lifecycle: feedback
+session_ended: (unset)
+annotation_count: 2
+captain_message_count: 0
+
+ANNOTATIONS
+ANNOTATION 1 of 2
+element_uid: 1
+element_selector: html > body > header
+tag: text
+text:
+| bearings
+prompt:
+| Truncation test annotation
+ANNOTATION 2 of 2
+element_uid: 2
+element_selector: div#bb-call > div:nth-of-type(44) > div > form
+tag: choice
+text:
+| Lab choice 44 -> yes
+END ANNOTATIONS
+END LAVISH RESULT (2 of 3)

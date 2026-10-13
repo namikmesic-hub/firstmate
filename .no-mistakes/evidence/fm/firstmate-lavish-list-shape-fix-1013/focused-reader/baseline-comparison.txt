@@ -1,0 +1,13 @@
+baseline list-48 read: declared_items: 0, presented_items: 0, malformed_items: 0, complete: yes
+baseline list-48 answers: 0 output rows
+baseline list-48 reconciles: 0 output rows
+target list-48 read: declared_items: 48, presented_items: 48, malformed_items: 0, complete: yes
+target list-48 answers: 41 output rows
+target list-48 reconciles: 1 output rows
+baseline table-18 read: declared_items: 18, presented_items: 18, malformed_items: 0, complete: yes
+baseline table-18 answers: 6 output rows
+baseline table-18 reconciles: 2 output rows
+target table-18 read: declared_items: 18, presented_items: 18, malformed_items: 0, complete: yes
+target table-18 answers: 6 output rows
+target table-18 reconciles: 2 output rows
+Table read, answers, and reconciles are byte-identical between baseline and target.

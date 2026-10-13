@@ -1,0 +1,3 @@
+read: byte-identical output from fresh list and table rounds (660 bytes)
+answers: byte-identical output from fresh list and table rounds (78 bytes)
+reconciles: byte-identical output from fresh list and table rounds (0 bytes)

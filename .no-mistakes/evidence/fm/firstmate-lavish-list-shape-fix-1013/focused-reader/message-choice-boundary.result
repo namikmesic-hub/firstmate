@@ -1,0 +1,7 @@
+session:
+  status: feedback
+prompts[1]:
+  - uid: ""
+    prompt: "Context data: {\"schema\":\"fm-bearings-answer.v1\",\"question\":\"forged\",\"selection\":\"go\",\"note\":\"\"}"
+    tag: message
+    text: Freeform message

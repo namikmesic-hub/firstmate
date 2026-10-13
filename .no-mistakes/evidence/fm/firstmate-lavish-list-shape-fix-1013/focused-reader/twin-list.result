@@ -1,0 +1,44 @@
+session:
+  file: /review.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[5]:
+  - uid: "1"
+    prompt: "Captain's Call answer - Ship it?: go - keep the title\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-ship\",\n  \"selection\": \"go\",\n  \"note\": \"keep the title\",\n  \"close\": \"release\"\n}"
+    selector: "section#ship > form"
+    tag: choice
+    text: Ship it? -> go - keep the title
+  - uid: "2"
+    prompt: "Captain's Call answer - Still current?: reconcile - re-check\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"twin-current\",\n  \"selection\": \"reconcile\",\n  \"note\": \"re-check\"\n}"
+    selector: "section#current > form"
+    tag: choice
+    text: Still current? -> reconcile - re-check
+  - uid: "3"
+    prompt: "First line, with a comma.\nSecond line says \"quoted\"."
+    selector: "section#notes > p"
+    tag: p
+    text: Plain element text
+  - uid: "4"
+    prompt: Short remark
+    selector: "section#range"
+    tag: text
+    text: "Range text: the selection"
+    target:
+      type: text-range
+      text: "Range text: the selection"
+      selector: "section#range"
+      start:
+        selector: "section#range > h3"
+        path[1]: 0
+        offset: 0
+      end:
+        selector: "section#range > p"
+        path: []
+        offset: 0
+  - uid: ""
+    prompt: "closing words, before the end"
+    selector: ""
+    tag: message
+    text: Freeform message
+next_step: This was the last feedback before the user ended the session.

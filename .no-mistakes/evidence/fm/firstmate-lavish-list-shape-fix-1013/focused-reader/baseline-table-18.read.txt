@@ -1,0 +1,140 @@
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 18
+presented_items: 18
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: (unset)
+annotation_count: 18
+captain_message_count: 0
+
+ANNOTATIONS
+ANNOTATION 1 of 18
+element_uid: 1
+element_selector: div#root > section:nth-of-type(1) > form
+tag: choice
+text:
+| Sample question 1 -> option-a
+ANNOTATION 2 of 18
+element_uid: 3
+element_selector: div#root > section:nth-of-type(2) > form
+tag: choice
+text:
+| Sample question 2, with a comma -> option-b
+ANNOTATION 3 of 18
+element_uid: 1
+element_selector: div#root > section:nth-of-type(1) > form
+tag: choice
+text:
+| Sample question 1 -> option-a
+ANNOTATION 4 of 18
+element_uid: 2
+element_selector: div#root > section:nth-of-type(2) > form
+tag: choice
+text:
+| Sample question 2, with a comma -> option-b
+ANNOTATION 5 of 18
+element_uid: 3
+element_selector: div#root > section:nth-of-type(3) > h3
+tag: h3
+text:
+| Sample element text 1
+prompt:
+| Sample comment 1
+ANNOTATION 6 of 18
+element_uid: 5
+element_selector: div#root > section:nth-of-type(3) > form
+tag: choice
+text:
+| Sample question 3: with a colon -> reconcile
+ANNOTATION 7 of 18
+element_uid: 6
+element_selector: div#root > section:nth-of-type(4) > form > div
+tag: div
+text:
+| Sample element text 2, with a comma
+prompt:
+| Sample comment 2, with a comma
+ANNOTATION 8 of 18
+element_uid: 7
+element_selector: div#root > section:nth-of-type(4) > form
+tag: choice
+text:
+| Sample question 4 -> reconcile
+ANNOTATION 9 of 18
+element_uid: 8
+element_selector: div#root > section:nth-of-type(5) > form
+tag: choice
+text:
+| Sample question 5, with a comma -> option-c
+ANNOTATION 10 of 18
+element_uid: 9
+element_selector: div#root > section:nth-of-type(6) > p:nth-of-type(1)
+tag: p
+text:
+| Sample element text 3
+prompt:
+| Sample comment 3 line one.
+| Sample comment 3 line two.
+ANNOTATION 11 of 18
+element_uid: 10
+element_selector: div#root > section:nth-of-type(7) > p:nth-of-type(1)
+tag: p
+text:
+| Sample element text 4, with a comma
+prompt:
+| Sample comment 4 with a "quoted" word
+ANNOTATION 12 of 18
+element_uid: 11
+element_selector: div#root > section:nth-of-type(8) > form
+tag: choice
+text:
+| Sample question 6: with a colon -> option-d
+ANNOTATION 13 of 18
+element_uid: 12
+element_selector: div#root > section:nth-of-type(9) > form
+tag: choice
+text:
+| Sample question 7 -> option-e
+ANNOTATION 14 of 18
+element_uid: 15
+element_selector: div#root > section:nth-of-type(10) > p:nth-of-type(2)
+tag: p
+text:
+| Sample element text 5
+prompt:
+| Sample comment 5
+ANNOTATION 15 of 18
+element_uid: 16
+element_selector: div#root > section:nth-of-type(11) > form
+tag: choice
+text:
+| Sample question 8, with a comma -> option-f
+ANNOTATION 16 of 18
+element_uid: 17
+element_selector: div#root > section:nth-of-type(12) > p:nth-of-type(1)
+tag: p
+text:
+| Sample element text 6, with a comma
+prompt:
+| Sample comment 6, with a comma
+ANNOTATION 17 of 18
+element_uid: 18
+element_selector: div#root > section:nth-of-type(12) > p:nth-of-type(2)
+tag: p
+text:
+| Sample element text 7
+prompt:
+| Sample comment 7 line one.
+| Sample comment 7 line two.
+ANNOTATION 18 of 18
+element_uid: 19
+element_selector: div#root > section:nth-of-type(13) > h3
+tag: h3
+text:
+| Sample element text 8, with a comma
+prompt:
+| Sample comment 8 with a "quoted" word
+END ANNOTATIONS
+END LAVISH RESULT (18 of 18)

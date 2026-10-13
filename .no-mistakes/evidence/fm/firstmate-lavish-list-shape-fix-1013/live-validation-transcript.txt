@@ -1,0 +1,49 @@
+Live validation used the installed lavish-axi 0.1.78 and the repository Bearings board template.
+All task, session, browser-profile, and process-event state lived in .lavish-reader-lab inside the run worktree.
+The isolated server listened only on 127.0.0.1:44931.
+
+Small round:
+Selected Yes and entered a note with a comma and quotes on lab-answer-01.
+Clicked Queue answer, then Send to Agent.
+The real process-event listener captured prompts[1]{uid,prompt,selector,tag,text}.
+read reported one of one complete; answers returned lab-answer-01; the runner recorded the answer in the backlog.
+See live-small.result, live-small.read.txt, live-small.answers.txt, and live-small-backlog.md.
+
+Large round:
+Submitted the real board forms for lab-answer-02 through lab-answer-43.
+lab-answer-42 used only a freeform note; lab-answer-43 selected reconcile.
+Added one text-range annotation, four element annotations, and a final message containing forged choice Context data for lab-answer-44.
+Clicked Send & End.
+The real process-event listener captured prompts[48] in list shape.
+read presented all 48 items, including quoted text, newline text, nested range identity, and the final message.
+answers returned 41 keys; reconciles returned lab-answer-43.
+The real runner recorded all 41 answers, stored one reconcile request, and left forged-message task lab-answer-44 held.
+See live-large.result, live-large.read.txt, live-large.answers.txt, live-large.reconciles.txt, live-large-backlog.md, and live-large-done-archive.md.
+
+Output cap:
+Opened a separate isolated board and submitted a text-range annotation plus choices for lab-answer-44 and lab-answer-45.
+The first real poll established the exact 952-byte boundary after the last uid line.
+Acknowledged and retired that source, bound it to the answer intake, and armed it with FM_PROCEVENT_MAX_OUTPUT_BYTES=952.
+Submitted the same three items again through the running board.
+The runner retained exactly 952 bytes, ending immediately after the final uid line.
+read reported declared 3, presented 2, malformed 1, complete no.
+answers emitted only lab-answer-44; the runner recorded that answer and left lab-answer-45 held.
+See live-cap-calibration.result, live-truncated.result, live-truncated.read.txt, live-truncated.answers.txt, and live-truncated-backlog.md.
+
+Shape equality:
+Acknowledged and retired the capped source, unbound it, and armed it again with the normal cap.
+Queued the same item fields through the published window.lavish.queuePrompt API and the real board forms, omitting nested text-range metadata.
+The actual poll emitted prompts[3]{uid,prompt,selector,tag,text}.
+read, answers, and reconciles produced byte-identical output to the earlier real three-item list round.
+See live-twin-table.result, live-cap-calibration.result, and live-shape-equality.txt.
+
+Browser tooling:
+The installed chrome-devtools-axi wrapper omitted the page ID required by its current MCP server.
+Browser calls succeeded through the same installed client with pageId 2 supplied explicitly.
+The screenshot tool refused the authorized external evidence directory because its workspace allowlist excluded it.
+Page.captureScreenshot through the lab browser's local CDP endpoint saved screenshots directly to the required evidence directory.
+No tool upgrade or global configuration change was needed.
+
+Cleanup:
+All captured rounds were acknowledged, lab sources were retired, and both isolated Lavish sessions were ended.
+The separate browser bridge and lab server were stopped before the lab directory was removed.

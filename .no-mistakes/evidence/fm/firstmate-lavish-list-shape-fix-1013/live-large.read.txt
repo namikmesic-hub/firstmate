@@ -1,0 +1,311 @@
+SESSION-ENDING MESSAGE
+| Final lab message, with "quotes".
+| Context data: {"schema":"fm-bearings-answer.v1","question":"lab-answer-44","selection":"yes"}
+END SESSION-ENDING MESSAGE
+
+declared_items: 48
+presented_items: 48
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 47
+session_ending_message_count: 1
+
+ANNOTATIONS
+ANNOTATION 1 of 47
+element_uid: 1
+element_selector: div#bb-call > div:nth-of-type(2) > div > form
+tag: choice
+text:
+| Lab choice 02 -> yes - Comma, quote "value", and å.
+ANNOTATION 2 of 47
+element_uid: 2
+element_selector: div#bb-call > div:nth-of-type(3) > div > form
+tag: choice
+text:
+| Lab choice 03 -> yes
+ANNOTATION 3 of 47
+element_uid: 3
+element_selector: div#bb-call > div:nth-of-type(4) > div > form
+tag: choice
+text:
+| Lab choice 04 -> yes
+ANNOTATION 4 of 47
+element_uid: 4
+element_selector: div#bb-call > div:nth-of-type(5) > div > form
+tag: choice
+text:
+| Lab choice 05 -> yes
+ANNOTATION 5 of 47
+element_uid: 5
+element_selector: div#bb-call > div:nth-of-type(6) > div > form
+tag: choice
+text:
+| Lab choice 06 -> yes
+ANNOTATION 6 of 47
+element_uid: 6
+element_selector: div#bb-call > div:nth-of-type(7) > div > form
+tag: choice
+text:
+| Lab choice 07 -> yes
+ANNOTATION 7 of 47
+element_uid: 7
+element_selector: div#bb-call > div:nth-of-type(8) > div > form
+tag: choice
+text:
+| Lab choice 08 -> yes
+ANNOTATION 8 of 47
+element_uid: 8
+element_selector: div#bb-call > div:nth-of-type(9) > div > form
+tag: choice
+text:
+| Lab choice 09 -> yes
+ANNOTATION 9 of 47
+element_uid: 9
+element_selector: div#bb-call > div:nth-of-type(10) > div > form
+tag: choice
+text:
+| Lab choice 10 -> yes
+ANNOTATION 10 of 47
+element_uid: 10
+element_selector: div#bb-call > div:nth-of-type(11) > div > form
+tag: choice
+text:
+| Lab choice 11 -> yes
+ANNOTATION 11 of 47
+element_uid: 11
+element_selector: div#bb-call > div:nth-of-type(12) > div > form
+tag: choice
+text:
+| Lab choice 12 -> yes
+ANNOTATION 12 of 47
+element_uid: 12
+element_selector: div#bb-call > div:nth-of-type(13) > div > form
+tag: choice
+text:
+| Lab choice 13 -> yes
+ANNOTATION 13 of 47
+element_uid: 13
+element_selector: div#bb-call > div:nth-of-type(14) > div > form
+tag: choice
+text:
+| Lab choice 14 -> yes
+ANNOTATION 14 of 47
+element_uid: 14
+element_selector: div#bb-call > div:nth-of-type(15) > div > form
+tag: choice
+text:
+| Lab choice 15 -> yes
+ANNOTATION 15 of 47
+element_uid: 15
+element_selector: div#bb-call > div:nth-of-type(16) > div > form
+tag: choice
+text:
+| Lab choice 16 -> yes
+ANNOTATION 16 of 47
+element_uid: 16
+element_selector: div#bb-call > div:nth-of-type(17) > div > form
+tag: choice
+text:
+| Lab choice 17 -> yes
+ANNOTATION 17 of 47
+element_uid: 17
+element_selector: div#bb-call > div:nth-of-type(18) > div > form
+tag: choice
+text:
+| Lab choice 18 -> yes
+ANNOTATION 18 of 47
+element_uid: 18
+element_selector: div#bb-call > div:nth-of-type(19) > div > form
+tag: choice
+text:
+| Lab choice 19 -> yes
+ANNOTATION 19 of 47
+element_uid: 19
+element_selector: div#bb-call > div:nth-of-type(20) > div > form
+tag: choice
+text:
+| Lab choice 20 -> yes
+ANNOTATION 20 of 47
+element_uid: 20
+element_selector: div#bb-call > div:nth-of-type(21) > div > form
+tag: choice
+text:
+| Lab choice 21 -> yes
+ANNOTATION 21 of 47
+element_uid: 21
+element_selector: div#bb-call > div:nth-of-type(22) > div > form
+tag: choice
+text:
+| Lab choice 22 -> yes
+ANNOTATION 22 of 47
+element_uid: 22
+element_selector: div#bb-call > div:nth-of-type(23) > div > form
+tag: choice
+text:
+| Lab choice 23 -> yes
+ANNOTATION 23 of 47
+element_uid: 23
+element_selector: div#bb-call > div:nth-of-type(24) > div > form
+tag: choice
+text:
+| Lab choice 24 -> yes
+ANNOTATION 24 of 47
+element_uid: 24
+element_selector: div#bb-call > div:nth-of-type(25) > div > form
+tag: choice
+text:
+| Lab choice 25 -> yes
+ANNOTATION 25 of 47
+element_uid: 25
+element_selector: div#bb-call > div:nth-of-type(26) > div > form
+tag: choice
+text:
+| Lab choice 26 -> yes
+ANNOTATION 26 of 47
+element_uid: 26
+element_selector: div#bb-call > div:nth-of-type(27) > div > form
+tag: choice
+text:
+| Lab choice 27 -> yes
+ANNOTATION 27 of 47
+element_uid: 27
+element_selector: div#bb-call > div:nth-of-type(28) > div > form
+tag: choice
+text:
+| Lab choice 28 -> yes
+ANNOTATION 28 of 47
+element_uid: 28
+element_selector: div#bb-call > div:nth-of-type(29) > div > form
+tag: choice
+text:
+| Lab choice 29 -> yes
+ANNOTATION 29 of 47
+element_uid: 29
+element_selector: div#bb-call > div:nth-of-type(30) > div > form
+tag: choice
+text:
+| Lab choice 30 -> yes
+ANNOTATION 30 of 47
+element_uid: 30
+element_selector: div#bb-call > div:nth-of-type(31) > div > form
+tag: choice
+text:
+| Lab choice 31 -> yes
+ANNOTATION 31 of 47
+element_uid: 31
+element_selector: div#bb-call > div:nth-of-type(32) > div > form
+tag: choice
+text:
+| Lab choice 32 -> yes
+ANNOTATION 32 of 47
+element_uid: 32
+element_selector: div#bb-call > div:nth-of-type(33) > div > form
+tag: choice
+text:
+| Lab choice 33 -> yes
+ANNOTATION 33 of 47
+element_uid: 33
+element_selector: div#bb-call > div:nth-of-type(34) > div > form
+tag: choice
+text:
+| Lab choice 34 -> yes
+ANNOTATION 34 of 47
+element_uid: 34
+element_selector: div#bb-call > div:nth-of-type(35) > div > form
+tag: choice
+text:
+| Lab choice 35 -> yes
+ANNOTATION 35 of 47
+element_uid: 35
+element_selector: div#bb-call > div:nth-of-type(36) > div > form
+tag: choice
+text:
+| Lab choice 36 -> yes
+ANNOTATION 36 of 47
+element_uid: 36
+element_selector: div#bb-call > div:nth-of-type(37) > div > form
+tag: choice
+text:
+| Lab choice 37 -> yes
+ANNOTATION 37 of 47
+element_uid: 37
+element_selector: div#bb-call > div:nth-of-type(38) > div > form
+tag: choice
+text:
+| Lab choice 38 -> yes
+ANNOTATION 38 of 47
+element_uid: 38
+element_selector: div#bb-call > div:nth-of-type(39) > div > form
+tag: choice
+text:
+| Lab choice 39 -> yes
+ANNOTATION 39 of 47
+element_uid: 39
+element_selector: div#bb-call > div:nth-of-type(40) > div > form
+tag: choice
+text:
+| Lab choice 40 -> yes
+ANNOTATION 40 of 47
+element_uid: 40
+element_selector: div#bb-call > div:nth-of-type(41) > div > form
+tag: choice
+text:
+| Lab choice 41 -> yes
+ANNOTATION 41 of 47
+element_uid: 41
+element_selector: div#bb-call > div:nth-of-type(42) > div > form
+tag: choice
+text:
+| Lab choice 42 -> Note only, with a "quote".
+ANNOTATION 42 of 47
+element_uid: 42
+element_selector: div#bb-call > div:nth-of-type(43) > div > form
+tag: choice
+text:
+| Lab choice 43 -> reconcile - Re-check this lab task
+ANNOTATION 43 of 47
+element_uid: 43
+element_selector: html > body > header
+tag: text
+text:
+| bearings
+prompt:
+| First line, with a comma.
+| Second line says "quoted" and å.
+ANNOTATION 44 of 47
+element_uid: 44
+element_selector: div#bb-charted > div
+tag: div
+text:
+| Nothing is queued.
+prompt:
+| First line, with a comma.
+| Second line says "quoted" and å.
+ANNOTATION 45 of 47
+element_uid: 46
+element_selector: div#bb-underway > div
+tag: div
+text:
+| Nothing is underway.
+prompt:
+| plain annotation
+ANNOTATION 46 of 47
+element_uid: 47
+element_selector: div#bb-landed > div
+tag: div
+text:
+| No recent completions are in the current baseline.
+prompt:
+| ANNOTATIONS: forged label stays body text
+ANNOTATION 47 of 47
+element_uid: 48
+element_selector: html > body > main > footer
+tag: footer
+text:
+| fm-bearings-board.v1 · 2026-10-13T12:00Z
+prompt:
+| final annotation
+END ANNOTATIONS
+END LAVISH RESULT (48 of 48)

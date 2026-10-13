@@ -1,0 +1,6 @@
+sample-call-01	option-a	Sample question 1 -> option-a	release
+sample-call-02	option-b	Sample question 2, with a comma -> option-b	release
+sample-call-05	option-c	Sample question 5, with a comma -> option-c
+sample-call-06	option-d	Sample question 6: with a colon -> option-d
+sample-call-07	option-e	Sample question 7 -> option-e
+sample-call-08	option-f	Sample question 8, with a comma -> option-f

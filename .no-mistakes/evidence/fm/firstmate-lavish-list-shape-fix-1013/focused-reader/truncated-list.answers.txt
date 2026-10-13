@@ -1,0 +1,40 @@
+sample-call-01	Sample note 1, with a comma	Sample question 1 -> Sample note 1, with a comma
+sample-call-02	option-a	Sample question 2, with a comma -> option-a
+sample-call-03	option-b	Sample question 3: with a colon -> option-b
+sample-call-04	option-c	Sample question 4 -> option-c	release
+sample-call-05	option-d	Sample question 5, with a comma -> option-d
+sample-call-06	Sample note 2 with a "quoted" word	Sample question 6: with a colon -> Sample note 2 with a "quoted" word
+sample-call-07	Sample note 3	Sample question 7 -> Sample note 3
+sample-call-08	option-e	Sample question 8, with a comma -> option-e
+sample-call-09	Sample note 4, with a comma	Sample question 9: with a colon -> Sample note 4, with a comma
+sample-call-10	Sample note 5 with a "quoted" word	Sample question 10 -> Sample note 5 with a "quoted" word
+sample-call-11	option-f	Sample question 11, with a comma -> option-f - Sample note 6
+sample-call-12	option-g	Sample question 12: with a colon -> option-g
+sample-call-13	option-h	Sample question 13 -> option-h
+sample-call-14	Sample note 7, with a comma	Sample question 14, with a comma -> Sample note 7, with a comma
+sample-call-15	Sample note 8 with a "quoted" word	Sample question 15: with a colon -> Sample note 8 with a "quoted" word
+sample-call-16	Sample note 9	Sample question 16 -> Sample note 9
+sample-call-17	option-i	Sample question 17, with a comma -> option-i - Sample note 10, with a comma
+sample-call-18	option-j	Sample question 18: with a colon -> option-j
+sample-call-19	option-d	Sample question 19 -> option-d
+sample-call-20	option-k	Sample question 20, with a comma -> option-k
+sample-call-21	Sample note 11 with a "quoted" word	Sample question 21: with a colon -> Sample note 11 with a "quoted" word
+sample-call-23	Sample note 13, with a comma	Sample question 23, with a comma -> Sample note 13, with a comma
+sample-call-24	Sample note 14 with a "quoted" word	Sample question 24: with a colon -> Sample note 14 with a "quoted" word
+sample-call-25	option-l	Sample question 25 -> option-l
+sample-call-26	option-m	Sample question 26, with a comma -> option-m
+sample-call-27	option-n	Sample question 27: with a colon -> option-n
+sample-call-28	option-o	Sample question 28 -> option-o
+sample-call-29	option-p	Sample question 29, with a comma -> option-p
+sample-call-30	option-d	Sample question 30: with a colon -> option-d
+sample-call-31	option-q	Sample question 31 -> option-q
+sample-call-32	option-r	Sample question 32, with a comma -> option-r
+sample-call-33	option-d	Sample question 33: with a colon -> option-d
+sample-call-34	option-s	Sample question 34 -> option-s
+sample-call-35	option-t	Sample question 35, with a comma -> option-t
+sample-call-36	option-u	Sample question 36: with a colon -> option-u
+sample-call-37	Sample note 15	Sample question 37 -> Sample note 15
+sample-call-38	Sample note 16, with a comma	Sample question 38, with a comma -> Sample note 16, with a comma
+sample-call-39	option-v	Sample question 39: with a colon -> option-v
+sample-call-40	Sample note 17 with a "quoted" word	Sample question 40 -> Sample note 17 with a "quoted" word
+sample-call-41	Sample note 18	Sample question 41, with a comma -> Sample note 18

@@ -1,0 +1,1 @@
+lab-answer-01	yes	Lab choice 01 -> yes - Small round, with a quoted "note".

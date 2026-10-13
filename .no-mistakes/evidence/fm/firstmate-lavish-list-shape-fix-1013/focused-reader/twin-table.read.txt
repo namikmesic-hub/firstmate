@@ -1,0 +1,45 @@
+SESSION-ENDING MESSAGE
+| closing words, before the end
+END SESSION-ENDING MESSAGE
+
+declared_items: 5
+presented_items: 5
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 4
+session_ending_message_count: 1
+
+ANNOTATIONS
+ANNOTATION 1 of 4
+element_uid: 1
+element_selector: section#ship > form
+tag: choice
+text:
+| Ship it? -> go - keep the title
+ANNOTATION 2 of 4
+element_uid: 2
+element_selector: section#current > form
+tag: choice
+text:
+| Still current? -> reconcile - re-check
+ANNOTATION 3 of 4
+element_uid: 3
+element_selector: section#notes > p
+tag: p
+text:
+| Plain element text
+prompt:
+| First line, with a comma.
+| Second line says "quoted".
+ANNOTATION 4 of 4
+element_uid: 4
+element_selector: section#range
+tag: text
+text:
+| Range text: the selection
+prompt:
+| Short remark
+END ANNOTATIONS
+END LAVISH RESULT (5 of 5)

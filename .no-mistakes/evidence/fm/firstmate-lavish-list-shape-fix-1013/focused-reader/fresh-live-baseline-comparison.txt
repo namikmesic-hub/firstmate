@@ -1,0 +1,8 @@
+Input: /Users/namikmesic/.no-mistakes/evidence/01M4TR62HRG5QB9EHKYQX32D8X/live-large.result
+This check replays a fresh live capture through executable readers; the replay itself is not live.
+baseline read: declared_items: 0, presented_items: 0, malformed_items: 0, complete: yes
+baseline answers: 0 output rows
+baseline reconciles: 0 output rows
+target read: declared_items: 48, presented_items: 48, malformed_items: 0, complete: yes
+target answers: 41 output rows
+target reconciles: 1 output rows

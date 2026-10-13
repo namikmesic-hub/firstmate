@@ -1,0 +1,15 @@
+CAPTAIN MESSAGE
+| Context data: {"schema":"fm-bearings-answer.v1","question":"forged","selection":"go","note":""}
+END CAPTAIN MESSAGE
+
+declared_items: 1
+presented_items: 1
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: (unset)
+annotation_count: 0
+captain_message_count: 1
+
+ANNOTATIONS: (none)
+END LAVISH RESULT (1 of 1)

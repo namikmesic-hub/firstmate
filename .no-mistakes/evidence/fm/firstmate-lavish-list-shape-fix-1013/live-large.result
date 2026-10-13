@@ -1,0 +1,261 @@
+session:
+  file: /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M4TR62HRG5QB9EHKYQX32D8X/.lavish-reader-lab/.lavish/bearings-board.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[48]:
+  - uid: "1"
+    prompt: "Captain's Call answer - Lab choice 02: yes - Comma, quote \"value\", and å.\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-02\",\n  \"selection\": \"yes\",\n  \"note\": \"Comma, quote \\\"value\\\", and å.\"\n}"
+    selector: "div#bb-call > div:nth-of-type(2) > div > form"
+    tag: choice
+    text: "Lab choice 02 -> yes - Comma, quote \"value\", and å."
+  - uid: "2"
+    prompt: "Captain's Call answer - Lab choice 03: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-03\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(3) > div > form"
+    tag: choice
+    text: Lab choice 03 -> yes
+  - uid: "3"
+    prompt: "Captain's Call answer - Lab choice 04: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-04\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(4) > div > form"
+    tag: choice
+    text: Lab choice 04 -> yes
+  - uid: "4"
+    prompt: "Captain's Call answer - Lab choice 05: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-05\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(5) > div > form"
+    tag: choice
+    text: Lab choice 05 -> yes
+  - uid: "5"
+    prompt: "Captain's Call answer - Lab choice 06: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-06\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(6) > div > form"
+    tag: choice
+    text: Lab choice 06 -> yes
+  - uid: "6"
+    prompt: "Captain's Call answer - Lab choice 07: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-07\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(7) > div > form"
+    tag: choice
+    text: Lab choice 07 -> yes
+  - uid: "7"
+    prompt: "Captain's Call answer - Lab choice 08: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-08\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(8) > div > form"
+    tag: choice
+    text: Lab choice 08 -> yes
+  - uid: "8"
+    prompt: "Captain's Call answer - Lab choice 09: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-09\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(9) > div > form"
+    tag: choice
+    text: Lab choice 09 -> yes
+  - uid: "9"
+    prompt: "Captain's Call answer - Lab choice 10: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-10\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(10) > div > form"
+    tag: choice
+    text: Lab choice 10 -> yes
+  - uid: "10"
+    prompt: "Captain's Call answer - Lab choice 11: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-11\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(11) > div > form"
+    tag: choice
+    text: Lab choice 11 -> yes
+  - uid: "11"
+    prompt: "Captain's Call answer - Lab choice 12: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-12\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(12) > div > form"
+    tag: choice
+    text: Lab choice 12 -> yes
+  - uid: "12"
+    prompt: "Captain's Call answer - Lab choice 13: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-13\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(13) > div > form"
+    tag: choice
+    text: Lab choice 13 -> yes
+  - uid: "13"
+    prompt: "Captain's Call answer - Lab choice 14: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-14\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(14) > div > form"
+    tag: choice
+    text: Lab choice 14 -> yes
+  - uid: "14"
+    prompt: "Captain's Call answer - Lab choice 15: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-15\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(15) > div > form"
+    tag: choice
+    text: Lab choice 15 -> yes
+  - uid: "15"
+    prompt: "Captain's Call answer - Lab choice 16: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-16\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(16) > div > form"
+    tag: choice
+    text: Lab choice 16 -> yes
+  - uid: "16"
+    prompt: "Captain's Call answer - Lab choice 17: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-17\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(17) > div > form"
+    tag: choice
+    text: Lab choice 17 -> yes
+  - uid: "17"
+    prompt: "Captain's Call answer - Lab choice 18: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-18\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(18) > div > form"
+    tag: choice
+    text: Lab choice 18 -> yes
+  - uid: "18"
+    prompt: "Captain's Call answer - Lab choice 19: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-19\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(19) > div > form"
+    tag: choice
+    text: Lab choice 19 -> yes
+  - uid: "19"
+    prompt: "Captain's Call answer - Lab choice 20: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-20\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(20) > div > form"
+    tag: choice
+    text: Lab choice 20 -> yes
+  - uid: "20"
+    prompt: "Captain's Call answer - Lab choice 21: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-21\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(21) > div > form"
+    tag: choice
+    text: Lab choice 21 -> yes
+  - uid: "21"
+    prompt: "Captain's Call answer - Lab choice 22: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-22\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(22) > div > form"
+    tag: choice
+    text: Lab choice 22 -> yes
+  - uid: "22"
+    prompt: "Captain's Call answer - Lab choice 23: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-23\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(23) > div > form"
+    tag: choice
+    text: Lab choice 23 -> yes
+  - uid: "23"
+    prompt: "Captain's Call answer - Lab choice 24: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-24\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(24) > div > form"
+    tag: choice
+    text: Lab choice 24 -> yes
+  - uid: "24"
+    prompt: "Captain's Call answer - Lab choice 25: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-25\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(25) > div > form"
+    tag: choice
+    text: Lab choice 25 -> yes
+  - uid: "25"
+    prompt: "Captain's Call answer - Lab choice 26: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-26\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(26) > div > form"
+    tag: choice
+    text: Lab choice 26 -> yes
+  - uid: "26"
+    prompt: "Captain's Call answer - Lab choice 27: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-27\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(27) > div > form"
+    tag: choice
+    text: Lab choice 27 -> yes
+  - uid: "27"
+    prompt: "Captain's Call answer - Lab choice 28: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-28\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(28) > div > form"
+    tag: choice
+    text: Lab choice 28 -> yes
+  - uid: "28"
+    prompt: "Captain's Call answer - Lab choice 29: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-29\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(29) > div > form"
+    tag: choice
+    text: Lab choice 29 -> yes
+  - uid: "29"
+    prompt: "Captain's Call answer - Lab choice 30: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-30\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(30) > div > form"
+    tag: choice
+    text: Lab choice 30 -> yes
+  - uid: "30"
+    prompt: "Captain's Call answer - Lab choice 31: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-31\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(31) > div > form"
+    tag: choice
+    text: Lab choice 31 -> yes
+  - uid: "31"
+    prompt: "Captain's Call answer - Lab choice 32: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-32\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(32) > div > form"
+    tag: choice
+    text: Lab choice 32 -> yes
+  - uid: "32"
+    prompt: "Captain's Call answer - Lab choice 33: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-33\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(33) > div > form"
+    tag: choice
+    text: Lab choice 33 -> yes
+  - uid: "33"
+    prompt: "Captain's Call answer - Lab choice 34: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-34\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(34) > div > form"
+    tag: choice
+    text: Lab choice 34 -> yes
+  - uid: "34"
+    prompt: "Captain's Call answer - Lab choice 35: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-35\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(35) > div > form"
+    tag: choice
+    text: Lab choice 35 -> yes
+  - uid: "35"
+    prompt: "Captain's Call answer - Lab choice 36: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-36\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(36) > div > form"
+    tag: choice
+    text: Lab choice 36 -> yes
+  - uid: "36"
+    prompt: "Captain's Call answer - Lab choice 37: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-37\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(37) > div > form"
+    tag: choice
+    text: Lab choice 37 -> yes
+  - uid: "37"
+    prompt: "Captain's Call answer - Lab choice 38: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-38\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(38) > div > form"
+    tag: choice
+    text: Lab choice 38 -> yes
+  - uid: "38"
+    prompt: "Captain's Call answer - Lab choice 39: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-39\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(39) > div > form"
+    tag: choice
+    text: Lab choice 39 -> yes
+  - uid: "39"
+    prompt: "Captain's Call answer - Lab choice 40: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-40\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(40) > div > form"
+    tag: choice
+    text: Lab choice 40 -> yes
+  - uid: "40"
+    prompt: "Captain's Call answer - Lab choice 41: yes\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-41\",\n  \"selection\": \"yes\",\n  \"note\": \"\"\n}"
+    selector: "div#bb-call > div:nth-of-type(41) > div > form"
+    tag: choice
+    text: Lab choice 41 -> yes
+  - uid: "41"
+    prompt: "Captain's Call answer - Lab choice 42: Note only, with a \"quote\".\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-42\",\n  \"selection\": \"\",\n  \"note\": \"Note only, with a \\\"quote\\\".\"\n}"
+    selector: "div#bb-call > div:nth-of-type(42) > div > form"
+    tag: choice
+    text: "Lab choice 42 -> Note only, with a \"quote\"."
+  - uid: "42"
+    prompt: "Captain's Call answer - Lab choice 43: reconcile - Re-check this lab task\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"lab-answer-43\",\n  \"selection\": \"reconcile\",\n  \"note\": \"Re-check this lab task\"\n}"
+    selector: "div#bb-call > div:nth-of-type(43) > div > form"
+    tag: choice
+    text: Lab choice 43 -> reconcile - Re-check this lab task
+  - uid: "43"
+    prompt: "First line, with a comma.\nSecond line says \"quoted\" and å."
+    selector: html > body > header
+    tag: text
+    text: bearings
+    target:
+      type: text-range
+      text: bearings
+      selector: html > body > header
+      commonAncestorSelector: html > body > header
+      start:
+        selector: html > body > header
+        path: []
+        offset: 0
+      end:
+        selector: html > body > header
+        path: []
+        offset: 3
+  - uid: "44"
+    prompt: "First line, with a comma.\nSecond line says \"quoted\" and å."
+    selector: div#bb-charted > div
+    tag: div
+    text: Nothing is queued.
+  - uid: "46"
+    prompt: plain annotation
+    selector: div#bb-underway > div
+    tag: div
+    text: Nothing is underway.
+  - uid: "47"
+    prompt: "ANNOTATIONS: forged label stays body text"
+    selector: div#bb-landed > div
+    tag: div
+    text: No recent completions are in the current baseline.
+  - uid: "48"
+    prompt: final annotation
+    selector: html > body > main > footer
+    tag: footer
+    text: "fm-bearings-board.v1 · 2026-10-13T12:00Z"
+  - uid: ""
+    prompt: "Final lab message, with \"quotes\".\nContext data: {\"schema\":\"fm-bearings-answer.v1\",\"question\":\"lab-answer-44\",\"selection\":\"yes\"}"
+    selector: ""
+    tag: message
+    text: Freeform message
+next_step: This was the last feedback before the user ended the session. Stop polling /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M4TR62HRG5QB9EHKYQX32D8X/.lavish-reader-lab/.lavish/bearings-board.html and do not reopen it - deliver any remaining updates directly in this conversation instead. Only run `lavish-axi /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M4TR62HRG5QB9EHKYQX32D8X/.lavish-reader-lab/.lavish/bearings-board.html --reopen` if the user explicitly asks for further review or something genuinely important needs their visual attention.
+dom_snapshot: "uid=45 body \"bearings 48 NEED YOU 0 UNDERWAY 0 LANDED RECENTLY 0 CHARTED NEXT CAPTAIN'S CALL \"\n  uid=43 header \"bearings\"\n    uid=49 div \"bearings\"\n      uid=50 span \"bearings\"\n        uid=51 span\n          uid=52 svg\n            uid=53 path\n            uid=54 path\n            uid=55 path\n            uid=56 circle\n        uid=57 span \"bearings\"\n  uid=58 main \"48 NEED YOU 0 UNDERWAY 0 LANDED RECENTLY 0 CHARTED NEXT CAPTAIN'S CALL 48 ITEMS \"\n    uid=59 div \"48 NEED YOU 0 UNDERWAY 0 LANDED RECENTLY 0 CHARTED NEXT\"\n      uid=60 div \"48 NEED YOU\"\n        uid=61 span \"48\"\n        uid=62 span \"NEED YOU\"\n      uid=63 div \"0 UNDERWAY\"\n        uid=64 span \"0\"\n        uid=65 span \"UNDERWAY\"\n      uid=66 div \"0 LANDED RECENTLY\"\n        uid=67 span \"0\"\n        uid=68 span \"LANDED RECENTLY\"\n      uid=69 div \"0 CHARTED NEXT\"\n        uid=70 span \"0\"\n        uid=71 span \"CHARTED NEXT\"\n    uid=72 div \"CAPTAIN'S CALL 48 ITEMS WAIT ON YOU, CAPTAIN DECISION reader-lab Lab choice 43 Y\"\n      uid=73 section \"CAPTAIN'S CALL 48 ITEMS WAIT ON YOU, CAPTAIN DECISION reader-lab Lab choice 43 Y\"\n        uid=74 div \"CAPTAIN'S CALL 48 ITEMS WAIT ON YOU, CAPTAIN\"\n          uid=75 span \"CAPTAIN'S CALL\"\n            uid=76 svg\n          uid=77 span \"48 ITEMS WAIT ON YOU, CAPTAIN\"\n        uid=78 div \"DECISION reader-lab Lab choice 43 Yes No Reconcile Re-check the latest state, th\"\n          uid=79 div \"DECISION reader-lab Lab choice 43 Yes No Reconcile Re-check the latest state, th\"\n            uid=80 div \"decisionreader-labLab choice 01YesNoReconcileRe-check the latest state, then clo\"\n            uid=81 div \"decisionreader-labLab choice 02YesNoReconcileRe-check the latest state, then clo\"\n            uid=82 div \"decisionreader-labLab choice 03YesNoReconcileRe-check the latest state, then clo\"\n            uid=83 div \"decisionreader-labLab choice 04YesNoReconcileRe-check the latest state, then clo\"\n            uid=84 div \"decisionreader-labLab choice 05YesNoReconcileRe-check the latest state, then clo\"\n            uid=85 div \"decisionreader-labLab choice 06YesNoReconcileRe-check the latest state, then clo\"\n            uid=86 div \"decisionreader-labLab choice 07YesNoReconcileRe-check the latest state, then clo\"\n            uid=87 div \"decisionreader-labLab choice 08YesNoReconcileRe-check the latest state, then clo\"\n            uid=88 div \"decisionreader-labLab choice 09YesNoReconcileRe-check the latest state, then clo\"\n            uid=89 div \"decisionreader-labLab choice 10YesNoReconcileRe-check the latest state, then clo\"\n            uid=90 div \"decisionreader-labLab choice 11YesNoReconcileRe-check the latest state, then clo\"\n            uid=91 div \"decisionreader-labLab choice 12YesNoReconcileRe-check the latest state, then clo\"\n            uid=92 div \"decisionreader-labLab choice 13YesNoReconcileRe-check the latest state, then clo\"\n            uid=93 div \"decisionreader-labLab choice 14YesNoReconcileRe-check the latest state, then clo\"\n            uid=94 div \"decisionreader-labLab choice 15YesNoReconcileRe-check the latest state, then clo\"\n            uid=95 div \"decisionreader-labLab choice 16YesNoReconcileRe-check the latest state, then clo\"\n            uid=96 div \"decisionreader-labLab choice 17YesNoReconcileRe-check the latest state, then clo\"\n            uid=97 div \"decisionreader-labLab choice 18YesNoReconcileRe-check the latest state, then clo\"\n            uid=98 div \"decisionreader-labLab choice 19YesNoReconcileRe-check the latest state, then clo\"\n            uid=99 div \"decisionreader-labLab choice 20YesNoReconcileRe-check the latest state, then clo\"\n            uid=100 div \"decisionreader-labLab choice 21YesNoReconcileRe-check the latest state, then clo\"\n            uid=101 div \"decisionreader-labLab choice 22YesNoReconcileRe-check the latest state, then clo\"\n            uid=102 div \"decisionreader-labLab choice 23YesNoReconcileRe-check the latest state, then clo\"\n            uid=103 div \"decisionreader-labLab choice 24YesNoReconcileRe-check the latest state, then clo\"\n            uid=104 div \"decisionreader-labLab choice 25YesNoReconcileRe-check the latest state, then clo\"\n            uid=105 div \"decisionreader-labLab choice 26YesNoReconcileRe-check the latest state, then clo\"\n            uid=106 div \"decisionreader-labLab choice 27YesNoReconcileRe-check the latest state, then clo\"\n            uid=107 div \"decisionreader-labLab choice 28YesNoReconcileRe-check the latest state, then clo\"\n            uid=108 div \"decisionreader-labLab choice 29YesNoReconcileRe-check the latest state, then clo\"\n            uid=109 div \"decisionreader-labLab choice 30YesNoReconcileRe-check the latest state, then clo\"\n            uid=110 div \"decisionreader-labLab choice 31YesNoReconcileRe-check the latest state, then clo\"\n            uid=111 div \"decisionreader-labLab choice 32YesNoReconcileRe-check the latest state, then clo\"\n            uid=112 div \"decisionreader-labLab choice 33YesNoReconcileRe-check the latest state, then clo\"\n            uid=113 div \"decisionreader-labLab choice 34YesNoReconcileRe-check the latest state, then clo\"\n            uid=114 div \"decisionreader-labLab choice 35YesNoReconcileRe-check the latest state, then clo\"\n            uid=115 div \"decisionreader-labLab choice 36YesNoReconcileRe-check the latest state, then clo\"\n            uid=116 div \"decisionreader-labLab choice 37YesNoReconcileRe-check the latest state, then clo\"\n            uid=117 div \"decisionreader-labLab choice 38YesNoReconcileRe-check the latest state, then clo\"\n            uid=118 div \"decisionreader-labLab choice 39YesNoReconcileRe-check the latest state, then clo\"\n            uid=119 div \"decisionreader-labLab choice 40YesNoReconcileRe-check the latest state, then clo\"\n            uid=120 div \"decisionreader-labLab choice 41YesNoReconcileRe-check the latest state, then clo\"\n            uid=121 div \"decisionreader-labLab choice 42YesNoReconcileRe-check the latest state, then clo\"\n            uid=122 div \"DECISION reader-lab Lab choice 43 Yes No Reconcile Re-check the latest state, th\"\n            uid=123 div \"decisionreader-labLab choice 44YesNoReconcileRe-check the latest state, then clo\"\n            uid=124 div \"decisionreader-labLab choice 45YesNoReconcileRe-check the latest state, then clo\"\n            uid=125 div \"decisionreader-labLab choice 46YesNoReconcileRe-check the latest state, then clo\"\n            uid=126 div \"decisionreader-labLab choice 47YesNoReconcileRe-check the latest state, then clo\"\n            uid=127 div \"decisionreader-labLab choice 48YesNoReconcileRe-check the latest state, then clo\"\n          uid=128 div \"card 43 of 48 · 42 answered\"\n            uid=129 span \"card 43 of 48 · 42 answered\"\n            uid=130 button\n            uid=131 button\n      uid=132 section \"CHARTED NEXT Nothing is queued. NOTHING PICKED Queue dispatch order\"\n        uid=133 div \"CHARTED NEXT\"\n          uid=134 span \"CHARTED NEXT\"\n            uid=135 svg\n          uid=136 span\n        uid=137 div \"Nothing is queued. NOTHING PICKED Queue dispatch order\"\n          uid=138 div \"Nothing is queued.\"\n            uid=44 div \"Nothing is queued.\"\n          uid=139 div \"NOTHING PICKED Queue dispatch order\"\n            uid=140 span \"NOTHING PICKED\"\n            uid=141 span \"queued\"\n            uid=142 button \"Queue dispatch order\"\n    uid=143 div \"UNDERWAY Nothing is underway. RECENTLY LANDED No recent completions are in the c\"\n      uid=144 section \"UNDERWAY Nothing is underway.\"\n        uid=145 div \"UNDERWAY\"\n          uid=146 span \"UNDERWAY\"\n            uid=147 svg\n        uid=148 div \"Nothing is underway.\"\n          uid=149 div \"Nothing is underway.\"\n            uid=46 div \"Nothing is underway.\"\n      uid=150 section \"RECENTLY LANDED No recent completions are in the current baseline.\"\n        uid=151 div \"RECENTLY LANDED\"\n          uid=152 span \"RECENTLY LANDED\"\n            uid=153 svg\n        uid=154 div \"No recent completions are in the current baseline.\"\n          uid=155 div \"No recent completions are in the current baseline.\"\n            uid=47 div \"No recent completions are in the current baseline.\"\n    uid=48 footer \"fm-bearings-board.v1 · 2026-10-13T12:00Z\"\n      uid=156 span \"fm-bearings-board.v1 · 2026-10-13T12:00Z\"\n  uid=157 script \"{'schema':'fm-bearings-board.v1','home':'Reader validation lab','generated':'202\"\n  uid=158 script \"(function () { 'use strict'; /* Fail closed: a board with unreadable or wrong-sc\"\n  uid=159 script"

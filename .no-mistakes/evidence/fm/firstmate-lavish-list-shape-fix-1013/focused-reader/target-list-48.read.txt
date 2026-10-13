@@ -1,0 +1,315 @@
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 48
+presented_items: 48
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: (unset)
+annotation_count: 48
+captain_message_count: 0
+
+ANNOTATIONS
+ANNOTATION 1 of 48
+element_uid: 1
+element_selector: div#root > section:nth-of-type(1) > form
+tag: choice
+text:
+| Sample question 1 -> Sample note 1, with a comma
+ANNOTATION 2 of 48
+element_uid: 3
+element_selector: div#root > section:nth-of-type(3) > form
+tag: choice
+text:
+| Sample question 2, with a comma -> option-a
+ANNOTATION 3 of 48
+element_uid: 4
+element_selector: div#root > section:nth-of-type(4) > form
+tag: choice
+text:
+| Sample question 3: with a colon -> option-b
+ANNOTATION 4 of 48
+element_uid: 5
+element_selector: div#root > section:nth-of-type(5) > form
+tag: choice
+text:
+| Sample question 4 -> option-c
+ANNOTATION 5 of 48
+element_uid: 6
+element_selector: div#root > section:nth-of-type(6) > form
+tag: choice
+text:
+| Sample question 5, with a comma -> option-d
+ANNOTATION 6 of 48
+element_uid: 7
+element_selector: div#root > section:nth-of-type(6) > p
+tag: p
+text:
+| Sample element text 1
+prompt:
+| Sample comment 1
+ANNOTATION 7 of 48
+element_uid: 9
+element_selector: div#root > section:nth-of-type(8) > form
+tag: choice
+text:
+| Sample question 6: with a colon -> Sample note 2 with a "quoted" word
+ANNOTATION 8 of 48
+element_uid: 10
+element_selector: div#root > section:nth-of-type(9) > form
+tag: choice
+text:
+| Sample question 7 -> Sample note 3
+ANNOTATION 9 of 48
+element_uid: 11
+element_selector: div#root > section:nth-of-type(10) > form
+tag: choice
+text:
+| Sample question 8, with a comma -> option-e
+ANNOTATION 10 of 48
+element_uid: 12
+element_selector: div#root > section:nth-of-type(11) > form
+tag: choice
+text:
+| Sample question 9: with a colon -> Sample note 4, with a comma
+ANNOTATION 11 of 48
+element_uid: 13
+element_selector: div#root > section:nth-of-type(12) > form
+tag: choice
+text:
+| Sample question 10 -> Sample note 5 with a "quoted" word
+ANNOTATION 12 of 48
+element_uid: 14
+element_selector: div#root > section:nth-of-type(13) > form
+tag: choice
+text:
+| Sample question 11, with a comma -> option-f - Sample note 6
+ANNOTATION 13 of 48
+element_uid: 15
+element_selector: div#root > section:nth-of-type(14) > form
+tag: choice
+text:
+| Sample question 12: with a colon -> option-g
+ANNOTATION 14 of 48
+element_uid: 16
+element_selector: div#root > section:nth-of-type(15) > form
+tag: choice
+text:
+| Sample question 13 -> option-h
+ANNOTATION 15 of 48
+element_uid: 17
+element_selector: div#root > section:nth-of-type(16) > form
+tag: choice
+text:
+| Sample question 14, with a comma -> Sample note 7, with a comma
+ANNOTATION 16 of 48
+element_uid: 18
+element_selector: div#root > section:nth-of-type(17) > form
+tag: choice
+text:
+| Sample question 15: with a colon -> Sample note 8 with a "quoted" word
+ANNOTATION 17 of 48
+element_uid: 19
+element_selector: div#root > section:nth-of-type(18) > form
+tag: choice
+text:
+| Sample question 16 -> Sample note 9
+ANNOTATION 18 of 48
+element_uid: 20
+element_selector: div#root > section:nth-of-type(19) > form
+tag: choice
+text:
+| Sample question 17, with a comma -> option-i - Sample note 10, with a comma
+ANNOTATION 19 of 48
+element_uid: 22
+element_selector: div#root > section:nth-of-type(20) > form
+tag: choice
+text:
+| Sample question 18: with a colon -> option-j
+ANNOTATION 20 of 48
+element_uid: 23
+element_selector: div#root > section:nth-of-type(21) > form
+tag: choice
+text:
+| Sample question 19 -> option-d
+ANNOTATION 21 of 48
+element_uid: 24
+element_selector: div#root > section:nth-of-type(22) > form
+tag: choice
+text:
+| Sample question 20, with a comma -> option-k
+ANNOTATION 22 of 48
+element_uid: 25
+element_selector: div#root > section:nth-of-type(23) > form
+tag: choice
+text:
+| Sample question 21: with a colon -> Sample note 11 with a "quoted" word
+ANNOTATION 23 of 48
+element_uid: 28
+element_selector: div#root > section:nth-of-type(24) > form
+tag: choice
+text:
+| Sample question 22 -> reconcile - Sample note 12
+ANNOTATION 24 of 48
+element_uid: 30
+element_selector: div#root > section:nth-of-type(26) > form
+tag: choice
+text:
+| Sample question 23, with a comma -> Sample note 13, with a comma
+ANNOTATION 25 of 48
+element_uid: 31
+element_selector: div#root > section:nth-of-type(27) > form
+tag: choice
+text:
+| Sample question 24: with a colon -> Sample note 14 with a "quoted" word
+ANNOTATION 26 of 48
+element_uid: 33
+element_selector: div#root > section:nth-of-type(27) > h3
+tag: h3
+text:
+| Sample element text 2, with a comma
+prompt:
+| Sample comment 2, with a comma
+ANNOTATION 27 of 48
+element_uid: 34
+element_selector: div#root > section:nth-of-type(28) > form
+tag: choice
+text:
+| Sample question 25 -> option-l
+ANNOTATION 28 of 48
+element_uid: 35
+element_selector: div#root > section:nth-of-type(29) > form
+tag: choice
+text:
+| Sample question 26, with a comma -> option-m
+ANNOTATION 29 of 48
+element_uid: 38
+element_selector: div#root > section:nth-of-type(30)
+tag: text
+text:
+| Sample element text 3
+prompt:
+| Sample comment 3 line one.
+| Sample comment 3 line two.
+ANNOTATION 30 of 48
+element_uid: 39
+element_selector: div#root > section:nth-of-type(31) > h3
+tag: h3
+text:
+| Sample element text 4, with a comma
+prompt:
+| Sample comment 4 with a "quoted" word
+ANNOTATION 31 of 48
+element_uid: 41
+element_selector: div#root > section:nth-of-type(32)
+tag: text
+text:
+| Sample element text 5
+prompt:
+| Sample comment 5
+ANNOTATION 32 of 48
+element_uid: 42
+element_selector: div#root > section:nth-of-type(30) > form
+tag: choice
+text:
+| Sample question 27: with a colon -> option-n
+ANNOTATION 33 of 48
+element_uid: 43
+element_selector: div#root > section:nth-of-type(31) > form
+tag: choice
+text:
+| Sample question 28 -> option-o
+ANNOTATION 34 of 48
+element_uid: 44
+element_selector: div#root > section:nth-of-type(32) > form
+tag: choice
+text:
+| Sample question 29, with a comma -> option-p
+ANNOTATION 35 of 48
+element_uid: 45
+element_selector: div#root > section:nth-of-type(33) > form
+tag: choice
+text:
+| Sample question 30: with a colon -> option-d
+ANNOTATION 36 of 48
+element_uid: 46
+element_selector: div#root > section:nth-of-type(34) > form
+tag: choice
+text:
+| Sample question 31 -> option-q
+ANNOTATION 37 of 48
+element_uid: 47
+element_selector: div#root > section:nth-of-type(35) > form
+tag: choice
+text:
+| Sample question 32, with a comma -> option-r
+ANNOTATION 38 of 48
+element_uid: 48
+element_selector: div#root > section:nth-of-type(36) > form
+tag: choice
+text:
+| Sample question 33: with a colon -> option-d
+ANNOTATION 39 of 48
+element_uid: 49
+element_selector: div#root > section:nth-of-type(37) > form
+tag: choice
+text:
+| Sample question 34 -> option-s
+ANNOTATION 40 of 48
+element_uid: 50
+element_selector: div#root > section:nth-of-type(38) > form
+tag: choice
+text:
+| Sample question 35, with a comma -> option-t
+ANNOTATION 41 of 48
+element_uid: 51
+element_selector: div#root > section:nth-of-type(39) > form
+tag: choice
+text:
+| Sample question 36: with a colon -> option-u
+ANNOTATION 42 of 48
+element_uid: 52
+element_selector: div#root > section:nth-of-type(40) > form
+tag: choice
+text:
+| Sample question 37 -> Sample note 15
+ANNOTATION 43 of 48
+element_uid: 54
+element_selector: div#root > section:nth-of-type(40) > form > div > span:nth-of-type(1)
+tag: span
+text:
+| Sample element text 6, with a comma
+prompt:
+| Sample comment 6, with a comma
+ANNOTATION 44 of 48
+element_uid: 55
+element_selector: div#root > section:nth-of-type(41) > form
+tag: choice
+text:
+| Sample question 38, with a comma -> Sample note 16, with a comma
+ANNOTATION 45 of 48
+element_uid: 56
+element_selector: div#root > section:nth-of-type(43) > form
+tag: choice
+text:
+| Sample question 39: with a colon -> option-v
+ANNOTATION 46 of 48
+element_uid: 58
+element_selector: div#root > section:nth-of-type(44) > form
+tag: choice
+text:
+| Sample question 40 -> Sample note 17 with a "quoted" word
+ANNOTATION 47 of 48
+element_uid: 59
+element_selector: div#root > section:nth-of-type(45) > form
+tag: choice
+text:
+| Sample question 41, with a comma -> Sample note 18
+ANNOTATION 48 of 48
+element_uid: 60
+element_selector: div#root > section:nth-of-type(46) > form
+tag: choice
+text:
+| Sample question 42: with a colon -> option-w
+END ANNOTATIONS
+END LAVISH RESULT (48 of 48)
