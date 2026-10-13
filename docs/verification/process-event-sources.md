@@ -27,9 +27,8 @@ Usage: lavish-axi poll <html-file> [--owner <label>] [--takeover] [--agent-reply
 The adapter uses `lavish-axi reply` under the source lock after arm eligibility and before listener registration on 0.1.80 and newer, and preserves poll-with-reply for older compatible versions.
 Its separate routing lookup reads the board's saved Lavish session; the adapter header owns that contract.
 
-`poll` frames a round's queued feedback in one of two shapes, chosen from the size of the round: a `prompts[N]{uid,prompt,selector,tag,text}:` table of N indented CSV rows, or a `prompts[N]:` list of N `- uid:` items with one `key: value` line per field.
-On 2026-10-13, `lavish-axi 0.1.78` returned an 18-item round in the table shape and a 48-item round in the list shape from one board; the table-only reader of that day counted the second round as zero items.
-[`tests/captures/lavish-axi-0.1.78/README.md`](../../tests/captures/lavish-axi-0.1.78/README.md) owns the provenance of both captures, and the `lavish_items` reader in `bin/fm-procevent-lavish.sh` owns the two shapes.
+The [capture README](../../tests/captures/lavish-axi-0.1.78/README.md) owns provenance and sanitization details for both recorded poll formats.
+The `lavish_items` comment in [`bin/fm-procevent-lavish.sh`](../../bin/fm-procevent-lavish.sh) owns the accepted formats and block validation rules.
 
 ## Why an ended Lavish review is terminal
 

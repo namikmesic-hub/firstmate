@@ -102,7 +102,7 @@
 # intake in bin/fm-captain-hold.sh, which the runner feeds. A Lavish review is
 # just an ephemeral discussion format that happens to carry answers.
 #
-# Only rows tagged `choice` are read. A freeform captain message is prose that may
+# Only items tagged `choice` are read. A freeform captain message is prose that may
 # contain anything, and must never be able to forge a decision key.
 #
 # `read` is the presentation command summarized above; keyed intake remains
@@ -574,37 +574,33 @@ cmd_silent() {
   [ "$content_rc" -eq 1 ]
 }
 
-# One reader for every published shape of a queued-content block, shared by
-# `read`, `answers`, and `reconciles` so the three can never disagree about
-# what a round carried. The published poll frames queued feedback in one of
-# two shapes, chosen by Lavish from the size of the round:
+# One reader for the published table and list shapes, shared by `read`,
+# `answers`, and `reconciles`. It decodes both shapes into the same item fields:
 #
-#   prompts[N]{uid,prompt,selector,tag,text}:     the table shape of a small
-#     "1","Captain's Call answer - ...",...       round: exactly N indented CSV
-#                                                 rows in the declared field
+#   prompts[N]{uid,prompt,selector,tag,text}:     table shape: N indented CSV
+#     "1","Captain's Call answer - ...",...       rows in the declared field
 #                                                 ORDER
-#   prompts[N]:                                   the list shape of a large
-#     - uid: "1"                                  round: N items of one
-#       prompt: "Captain's Call answer - ..."     `- uid:` block each, one
-#       selector: "div#root > form"               `key: value` line per field,
-#       tag: choice                               plus deeper-indented nested
-#       text: Sample question -> yes              blocks (a text-range
-#       target:                                   annotation's `target:`) that
-#         type: text-range                        carry no item field
+#   prompts[N]:                                   list shape: N items of one
+#     - uid: "1"                                  `- uid:` block each, one
+#       prompt: "Captain's Call answer - ..."     `key: value` line per field,
+#       selector: "div#root > form"               plus deeper-indented nested
+#       tag: choice                               blocks (a text-range
+#       text: Sample question -> yes              annotation's `target:`) that
+#       target:                                   carry no item field
+#         type: text-range
 #
 # A value in either shape is a double-quoted scalar carrying \n, \", \\, \t,
 # and \r escapes, or a plain scalar for a short value with nothing to escape.
-# On 2026-10-13 a 48-answer round arrived in the list shape and the table-only
-# reader counted zero items, so the runner recorded none of the captain's
-# answers; tests/captures/lavish-axi-0.1.78/ holds a capture of each shape.
+# tests/captures/lavish-axi-0.1.78/README.md owns capture provenance.
 # Rows are INDENTED, so a column-zero line ends the block: an indented payload
 # line is captain-supplied text and must never be able to forge a header.
-# Reading stops after N items. A table row whose field count disagrees with
-# the header, and a list item carrying an unterminated quoted scalar, a line
+# Reading stops after N items. Table parsing first joins surplus comma-separated
+# values into `prompt`, or `text` when `prompt` is absent, for compatibility.
+# A table row whose field count still disagrees with the header is malformed.
+# A list item carrying an unterminated quoted scalar, a line
 # that is neither a field nor nested content, or fewer than the fields every
 # published item of its block carries (tag and text in a prompts block, text
-# in a feedback block), count as malformed and are not presented. Both shapes
-# decode to the same items, so the three presentations below see one shape.
+# in a feedback block) is malformed. Malformed items are not presented.
 # `read` presents a `feedback` block the same way; `answers` and `reconciles`
 # key only from a `prompts` block, as they always have.
 lavish_items() {  # <read|answers|reconciles> <result-file> [lifecycle] [session-ended]

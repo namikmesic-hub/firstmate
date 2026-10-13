@@ -1,6 +1,7 @@
 # Lavish poll result captures
 
-These files are recorded stdout of the published `lavish-axi poll` command, as `bin/fm-procevent-lavish.sh poll` captured it for the `read`, `answers`, and `reconciles` cases in `../../fm-procevent.test.sh`.
+These files contain sanitized stdout from `lavish-axi poll`, captured through `bin/fm-procevent-lavish.sh poll`.
+[`../../fm-procevent.test.sh`](../../fm-procevent.test.sh) replays them through `read`, `answers`, and `reconciles`.
 Both were captured on 2026-10-13 with `lavish-axi 0.1.78` from one bearings board, over two rounds of the same session.
 They are replay inputs for the adapter's result readers, not evidence that a live board was driven in the test.
 
@@ -8,11 +9,10 @@ They are replay inputs for the adapter's result readers, not evidence that a liv
 
 | File | Round | Shape | Items |
 | --- | --- | --- | --- |
-| `prompts-table-18.result` | first round, 18 queued items | a `prompts[18]{uid,prompt,selector,tag,text}:` header followed by 18 indented CSV rows | 10 choice, 5 p, 2 h3, 1 div |
-| `prompts-list-48.result` | second round, 48 queued items | a `prompts[48]:` header followed by 48 `- uid:` items | 42 choice, 2 h3, 1 p, 1 span, 2 text |
+| `prompts-table-18.result` | first round, 18 queued items | table | 10 choice, 5 p, 2 h3, 1 div |
+| `prompts-list-48.result` | second round, 48 queued items | list | 42 choice, 2 h3, 1 p, 1 span, 2 text |
 
-Lavish chose the shape from the size of the round.
-The list shape is the one the reader did not accept before this capture, so the second round read as zero items.
+The `lavish_items` comment in [`bin/fm-procevent-lavish.sh`](../../../bin/fm-procevent-lavish.sh) owns the format contract.
 
 ## Replay transformations
 
