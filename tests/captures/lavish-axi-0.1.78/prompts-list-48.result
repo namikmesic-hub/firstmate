@@ -1,0 +1,272 @@
+session:
+  file: /home/captain/.lavish/sample-board.html
+  status: feedback
+prompts[48]:
+  - uid: "1"
+    prompt: "Captain's Call answer - Sample question 1: Sample note 1, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-01\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 1, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(1) > form"
+    tag: choice
+    text: "Sample question 1 -> Sample note 1, with a comma"
+  - uid: "3"
+    prompt: "Captain's Call answer - Sample question 2, with a comma: option-a\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-02\",\n  \"selection\": \"option-a\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(3) > form"
+    tag: choice
+    text: "Sample question 2, with a comma -> option-a"
+  - uid: "4"
+    prompt: "Captain's Call answer - Sample question 3: with a colon: option-b\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-03\",\n  \"selection\": \"option-b\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(4) > form"
+    tag: choice
+    text: "Sample question 3: with a colon -> option-b"
+  - uid: "5"
+    prompt: "Captain's Call answer - Sample question 4: option-c\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-04\",\n  \"selection\": \"option-c\",\n  \"note\": \"\",\n  \"close\": \"release\"\n}"
+    selector: "div#root > section:nth-of-type(5) > form"
+    tag: choice
+    text: Sample question 4 -> option-c
+  - uid: "6"
+    prompt: "Captain's Call answer - Sample question 5, with a comma: option-d\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-05\",\n  \"selection\": \"option-d\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(6) > form"
+    tag: choice
+    text: "Sample question 5, with a comma -> option-d"
+  - uid: "7"
+    prompt: Sample comment 1
+    selector: "div#root > section:nth-of-type(6) > p"
+    tag: p
+    text: Sample element text 1
+  - uid: "9"
+    prompt: "Captain's Call answer - Sample question 6: with a colon: Sample note 2 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-06\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 2 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(8) > form"
+    tag: choice
+    text: "Sample question 6: with a colon -> Sample note 2 with a \"quoted\" word"
+  - uid: "10"
+    prompt: "Captain's Call answer - Sample question 7: Sample note 3\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-07\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 3\"\n}"
+    selector: "div#root > section:nth-of-type(9) > form"
+    tag: choice
+    text: Sample question 7 -> Sample note 3
+  - uid: "11"
+    prompt: "Captain's Call answer - Sample question 8, with a comma: option-e\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-08\",\n  \"selection\": \"option-e\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(10) > form"
+    tag: choice
+    text: "Sample question 8, with a comma -> option-e"
+  - uid: "12"
+    prompt: "Captain's Call answer - Sample question 9: with a colon: Sample note 4, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-09\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 4, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(11) > form"
+    tag: choice
+    text: "Sample question 9: with a colon -> Sample note 4, with a comma"
+  - uid: "13"
+    prompt: "Captain's Call answer - Sample question 10: Sample note 5 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-10\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 5 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(12) > form"
+    tag: choice
+    text: "Sample question 10 -> Sample note 5 with a \"quoted\" word"
+  - uid: "14"
+    prompt: "Captain's Call answer - Sample question 11, with a comma: option-f - Sample note 6\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-11\",\n  \"selection\": \"option-f\",\n  \"note\": \"Sample note 6\"\n}"
+    selector: "div#root > section:nth-of-type(13) > form"
+    tag: choice
+    text: "Sample question 11, with a comma -> option-f - Sample note 6"
+  - uid: "15"
+    prompt: "Captain's Call answer - Sample question 12: with a colon: option-g\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-12\",\n  \"selection\": \"option-g\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(14) > form"
+    tag: choice
+    text: "Sample question 12: with a colon -> option-g"
+  - uid: "16"
+    prompt: "Captain's Call answer - Sample question 13: option-h\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-13\",\n  \"selection\": \"option-h\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(15) > form"
+    tag: choice
+    text: Sample question 13 -> option-h
+  - uid: "17"
+    prompt: "Captain's Call answer - Sample question 14, with a comma: Sample note 7, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-14\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 7, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(16) > form"
+    tag: choice
+    text: "Sample question 14, with a comma -> Sample note 7, with a comma"
+  - uid: "18"
+    prompt: "Captain's Call answer - Sample question 15: with a colon: Sample note 8 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-15\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 8 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(17) > form"
+    tag: choice
+    text: "Sample question 15: with a colon -> Sample note 8 with a \"quoted\" word"
+  - uid: "19"
+    prompt: "Captain's Call answer - Sample question 16: Sample note 9\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-16\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 9\"\n}"
+    selector: "div#root > section:nth-of-type(18) > form"
+    tag: choice
+    text: Sample question 16 -> Sample note 9
+  - uid: "20"
+    prompt: "Captain's Call answer - Sample question 17, with a comma: option-i - Sample note 10, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-17\",\n  \"selection\": \"option-i\",\n  \"note\": \"Sample note 10, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(19) > form"
+    tag: choice
+    text: "Sample question 17, with a comma -> option-i - Sample note 10, with a comma"
+  - uid: "22"
+    prompt: "Captain's Call answer - Sample question 18: with a colon: option-j\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-18\",\n  \"selection\": \"option-j\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(20) > form"
+    tag: choice
+    text: "Sample question 18: with a colon -> option-j"
+  - uid: "23"
+    prompt: "Captain's Call answer - Sample question 19: option-d\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-19\",\n  \"selection\": \"option-d\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(21) > form"
+    tag: choice
+    text: Sample question 19 -> option-d
+  - uid: "24"
+    prompt: "Captain's Call answer - Sample question 20, with a comma: option-k\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-20\",\n  \"selection\": \"option-k\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(22) > form"
+    tag: choice
+    text: "Sample question 20, with a comma -> option-k"
+  - uid: "25"
+    prompt: "Captain's Call answer - Sample question 21: with a colon: Sample note 11 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-21\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 11 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(23) > form"
+    tag: choice
+    text: "Sample question 21: with a colon -> Sample note 11 with a \"quoted\" word"
+  - uid: "28"
+    prompt: "Captain's Call answer - Sample question 22: reconcile - Sample note 12\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-22\",\n  \"selection\": \"reconcile\",\n  \"note\": \"Sample note 12\"\n}"
+    selector: "div#root > section:nth-of-type(24) > form"
+    tag: choice
+    text: Sample question 22 -> reconcile - Sample note 12
+  - uid: "30"
+    prompt: "Captain's Call answer - Sample question 23, with a comma: Sample note 13, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-23\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 13, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(26) > form"
+    tag: choice
+    text: "Sample question 23, with a comma -> Sample note 13, with a comma"
+  - uid: "31"
+    prompt: "Captain's Call answer - Sample question 24: with a colon: Sample note 14 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-24\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 14 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(27) > form"
+    tag: choice
+    text: "Sample question 24: with a colon -> Sample note 14 with a \"quoted\" word"
+  - uid: "33"
+    prompt: "Sample comment 2, with a comma"
+    selector: "div#root > section:nth-of-type(27) > h3"
+    tag: h3
+    text: "Sample element text 2, with a comma"
+  - uid: "34"
+    prompt: "Captain's Call answer - Sample question 25: option-l\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-25\",\n  \"selection\": \"option-l\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(28) > form"
+    tag: choice
+    text: Sample question 25 -> option-l
+  - uid: "35"
+    prompt: "Captain's Call answer - Sample question 26, with a comma: option-m\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-26\",\n  \"selection\": \"option-m\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(29) > form"
+    tag: choice
+    text: "Sample question 26, with a comma -> option-m"
+  - uid: "38"
+    prompt: "Sample comment 3 line one.\nSample comment 3 line two."
+    selector: "div#root > section:nth-of-type(30)"
+    tag: text
+    text: Sample element text 3
+    target:
+      type: text-range
+      text: Sample element text 3
+      selector: "div#root > section:nth-of-type(30)"
+      commonAncestorSelector: "div#root > section:nth-of-type(30)"
+      start:
+        selector: "div#root > section:nth-of-type(30) > h3"
+        path[1]: 0
+        offset: 0
+      end:
+        selector: "div#root > section:nth-of-type(30) > p"
+        path: []
+        offset: 0
+  - uid: "39"
+    prompt: "Sample comment 4 with a \"quoted\" word"
+    selector: "div#root > section:nth-of-type(31) > h3"
+    tag: h3
+    text: "Sample element text 4, with a comma"
+  - uid: "41"
+    prompt: Sample comment 5
+    selector: "div#root > section:nth-of-type(32)"
+    tag: text
+    text: Sample element text 5
+    target:
+      type: text-range
+      text: Sample element text 5
+      selector: "div#root > section:nth-of-type(32)"
+      commonAncestorSelector: "div#root > section:nth-of-type(32)"
+      start:
+        selector: "div#root > section:nth-of-type(32) > h3"
+        path[1]: 0
+        offset: 0
+      end:
+        selector: "div#root > section:nth-of-type(32) > p"
+        path: []
+        offset: 0
+  - uid: "42"
+    prompt: "Captain's Call answer - Sample question 27: with a colon: option-n\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-27\",\n  \"selection\": \"option-n\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(30) > form"
+    tag: choice
+    text: "Sample question 27: with a colon -> option-n"
+  - uid: "43"
+    prompt: "Captain's Call answer - Sample question 28: option-o\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-28\",\n  \"selection\": \"option-o\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(31) > form"
+    tag: choice
+    text: Sample question 28 -> option-o
+  - uid: "44"
+    prompt: "Captain's Call answer - Sample question 29, with a comma: option-p\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-29\",\n  \"selection\": \"option-p\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(32) > form"
+    tag: choice
+    text: "Sample question 29, with a comma -> option-p"
+  - uid: "45"
+    prompt: "Captain's Call answer - Sample question 30: with a colon: option-d\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-30\",\n  \"selection\": \"option-d\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(33) > form"
+    tag: choice
+    text: "Sample question 30: with a colon -> option-d"
+  - uid: "46"
+    prompt: "Captain's Call answer - Sample question 31: option-q\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-31\",\n  \"selection\": \"option-q\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(34) > form"
+    tag: choice
+    text: Sample question 31 -> option-q
+  - uid: "47"
+    prompt: "Captain's Call answer - Sample question 32, with a comma: option-r\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-32\",\n  \"selection\": \"option-r\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(35) > form"
+    tag: choice
+    text: "Sample question 32, with a comma -> option-r"
+  - uid: "48"
+    prompt: "Captain's Call answer - Sample question 33: with a colon: option-d\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-33\",\n  \"selection\": \"option-d\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(36) > form"
+    tag: choice
+    text: "Sample question 33: with a colon -> option-d"
+  - uid: "49"
+    prompt: "Captain's Call answer - Sample question 34: option-s\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-34\",\n  \"selection\": \"option-s\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(37) > form"
+    tag: choice
+    text: Sample question 34 -> option-s
+  - uid: "50"
+    prompt: "Captain's Call answer - Sample question 35, with a comma: option-t\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-35\",\n  \"selection\": \"option-t\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(38) > form"
+    tag: choice
+    text: "Sample question 35, with a comma -> option-t"
+  - uid: "51"
+    prompt: "Captain's Call answer - Sample question 36: with a colon: option-u\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-36\",\n  \"selection\": \"option-u\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(39) > form"
+    tag: choice
+    text: "Sample question 36: with a colon -> option-u"
+  - uid: "52"
+    prompt: "Captain's Call answer - Sample question 37: Sample note 15\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-37\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 15\"\n}"
+    selector: "div#root > section:nth-of-type(40) > form"
+    tag: choice
+    text: Sample question 37 -> Sample note 15
+  - uid: "54"
+    prompt: "Sample comment 6, with a comma"
+    selector: "div#root > section:nth-of-type(40) > form > div > span:nth-of-type(1)"
+    tag: span
+    text: "Sample element text 6, with a comma"
+  - uid: "55"
+    prompt: "Captain's Call answer - Sample question 38, with a comma: Sample note 16, with a comma\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-38\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 16, with a comma\"\n}"
+    selector: "div#root > section:nth-of-type(41) > form"
+    tag: choice
+    text: "Sample question 38, with a comma -> Sample note 16, with a comma"
+  - uid: "56"
+    prompt: "Captain's Call answer - Sample question 39: with a colon: option-v\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-39\",\n  \"selection\": \"option-v\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(43) > form"
+    tag: choice
+    text: "Sample question 39: with a colon -> option-v"
+  - uid: "58"
+    prompt: "Captain's Call answer - Sample question 40: Sample note 17 with a \"quoted\" word\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-40\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 17 with a \\\"quoted\\\" word\"\n}"
+    selector: "div#root > section:nth-of-type(44) > form"
+    tag: choice
+    text: "Sample question 40 -> Sample note 17 with a \"quoted\" word"
+  - uid: "59"
+    prompt: "Captain's Call answer - Sample question 41, with a comma: Sample note 18\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-41\",\n  \"selection\": \"\",\n  \"note\": \"Sample note 18\"\n}"
+    selector: "div#root > section:nth-of-type(45) > form"
+    tag: choice
+    text: "Sample question 41, with a comma -> Sample note 18"
+  - uid: "60"
+    prompt: "Captain's Call answer - Sample question 42: with a colon: option-w\n\nContext data:\n{\n  \"schema\": \"fm-bearings-answer.v1\",\n  \"question\": \"sample-call-42\",\n  \"selection\": \"option-w\",\n  \"note\": \"\"\n}"
+    selector: "div#root > section:nth-of-type(46) > form"
+    tag: choice
+    text: "Sample question 42: with a colon -> option-w"
+next_step: "Apply the requested changes to /home/captain/.lavish/sample-board.html, then run the published poll again."
+dom_snapshot: "uid=1 body \"Sample board\"\n  uid=2 main \"Sample board\""
