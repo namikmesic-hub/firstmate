@@ -63,6 +63,12 @@
 #   (z3d) forced secondmate + child return leaves residue    -> warning, retirement completes, exit 4
 #   (z3e) return removes the copy                            -> cannot-verify warning, exit 4
 #   (z4) scout + ignored file                                -> ignored file survives
+#
+# Project clone refresh after cleanup (bin/fm-fleet-sync.sh). Every pool worktree
+# shares the clone's git directory, so a clone whose local main lags origin shows
+# each worker as behind until a teardown fast-forwards it:
+#   (fs1) scout on a remote-backed project, clone main lags origin -> clone main fast-forwarded
+#   (fs2) secondmate retirement whose record names that clone      -> clone main untouched
 set -u
 
 # shellcheck source=tests/lib.sh disable=SC1091
@@ -1722,6 +1728,58 @@ test_scout_ignored_files_survive_scratch_clean() {
   [ -z "$(git -C "$wt" status --porcelain --untracked-files=all)" ] \
     || fail "scout-ignored: untracked entries remain: $(git -C "$wt" status --porcelain --untracked-files=all)"
   pass "ignored files survive the scratch clean and plain scratch does not"
+}
+
+# Advance origin's main one commit past the project clone's local main, the way a
+# shared pool clone lags after other work merges upstream. Echoes origin's new
+# main revision. Args: case_dir
+advance_origin_main() {
+  local case_dir=$1
+  land_on_origin_main "$case_dir" moved.txt moved
+  git -C "$case_dir/origin.git" rev-parse main
+}
+
+# (fs1) A scout teardown refreshes the project clone like a ship teardown does.
+test_scout_teardown_fast_forwards_the_project_clone() {
+  local case_dir rc before origin_main
+  case_dir=$(make_case scout-clone-refresh)
+  write_meta "$case_dir" no-mistakes scout
+  prepare_scout_teardown "$case_dir"
+  before=$(git -C "$case_dir/project" rev-parse main)
+  origin_main=$(advance_origin_main "$case_dir")
+  [ "$before" != "$origin_main" ] || fail "scout-clone-refresh: fixture did not move origin ahead of the clone"
+
+  rc=0
+  run_teardown "$case_dir" > "$case_dir/stdout" 2> "$case_dir/stderr" || rc=$?
+
+  expect_code 0 "$rc" "scout-clone-refresh: scout teardown should succeed: $(cat "$case_dir/stderr")"
+  assert_equals "$origin_main" "$(git -C "$case_dir/project" rev-parse main)" \
+    "scout-clone-refresh: the project clone's main was not fast-forwarded to origin"
+  pass "a scout teardown fast-forwards the project clone's main to origin"
+}
+
+# (fs2) A secondmate has no project clone in this home, so its retirement never
+# refreshes the clone its record names.
+test_secondmate_teardown_leaves_the_project_clone_alone() {
+  local case_dir home rc before origin_main
+  case_dir=$(make_case secondmate-clone-untouched)
+  write_meta "$case_dir" secondmate secondmate
+  home="$case_dir/secondmate-home"
+  mkdir -p "$home/state" "$home/data" "$home/config" "$home/projects"
+  printf '%s\n' task-x1 > "$home/.fm-secondmate-home"
+  printf '%s\n' "home=$home" >> "$case_dir/state/task-x1.meta"
+  before=$(git -C "$case_dir/project" rev-parse main)
+  origin_main=$(advance_origin_main "$case_dir")
+  [ "$before" != "$origin_main" ] || fail "secondmate-clone-untouched: fixture did not move origin ahead of the clone"
+
+  rc=0
+  run_teardown "$case_dir" --force > "$case_dir/stdout" 2> "$case_dir/stderr" || rc=$?
+
+  expect_code 0 "$rc" "secondmate-clone-untouched: secondmate retirement should succeed: $(cat "$case_dir/stderr")"
+  assert_absent "$home" "secondmate-clone-untouched: the secondmate home was not removed"
+  assert_equals "$before" "$(git -C "$case_dir/project" rev-parse main)" \
+    "secondmate-clone-untouched: a secondmate retirement fast-forwarded the project clone"
+  pass "a secondmate retirement leaves the project clone's main untouched"
 }
 
 test_gh_error_and_content_absent_refuses() {
@@ -5090,6 +5148,8 @@ test_forced_secondmate_child_scout_nested_clone_returns_clean
 test_forced_secondmate_dirty_child_return_warns_and_completes
 test_return_that_removes_copy_warns_cannot_verify
 test_scout_ignored_files_survive_scratch_clean
+test_scout_teardown_fast_forwards_the_project_clone
+test_secondmate_teardown_leaves_the_project_clone_alone
 test_gh_error_and_content_absent_refuses
 test_legacy_record_without_the_flag_refuses
 test_windowless_legacy_record_with_gone_worktree_tears_down
