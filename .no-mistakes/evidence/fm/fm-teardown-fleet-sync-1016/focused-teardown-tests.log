@@ -1,0 +1,108 @@
+Supporting checks only. Existing lifecycle mocks mean these checks are not live.
+Target: 6406aab2b2ddbeb4e89b9d7980a18d69bed29829
+Base: ec2fe2a6c476699d56db393c14c6a3b0ff944418
+Runner uses existing test definitions and calls only the two new test functions.
+Cleared inherited environment names: 
+TMPDIR=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp
+FM_HOME=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/home
+
+PRECHECK COMMAND: bin/fm-remote-job-reap-orphans.sh --dry-run
+PRECHECK EXIT: 0
+
+COMMAND: bash /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/tests/.focused-teardown-1725.sh target
+ok - a scout teardown fast-forwards the project clone's main to origin
+
+CASE scout-clone-refresh
+local main: 4b5b34f654c7ef824e8bf7986c5e132abac7f18a
+origin actual main: 4b5b34f654c7ef824e8bf7986c5e132abac7f18a
+task record: removed
+PRODUCT STDOUT
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/scout-clone-refresh/project: synced 597f29f..4b5b34f
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/scout-clone-refresh/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/scout-clone-refresh/data/backlog.md). Update /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/scout-clone-refresh/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+PRODUCT STDERR
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CASE secondmate-clone-untouched
+local main: e3eba12a042fdf25578e0a7df07152e64a9786d5
+origin actual main: 64c07ed3a388b0c02c422dd80690360c9268e910
+task record: retained
+secondmate home: retained
+PRODUCT STDOUT
+PRODUCT STDERR
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: unsafe secondmate home removal target /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/secondmate-clone-untouched/secondmate-home is inside the firstmate repo
+not ok - secondmate-clone-untouched: secondmate retirement should succeed: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: unsafe secondmate home removal target /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8DvPEB/secondmate-clone-untouched/secondmate-home is inside the firstmate repo: expected exit 0, got 1
+EXIT: 1
+
+PRECHECK COMMAND: bin/fm-remote-job-reap-orphans.sh --dry-run
+PRECHECK EXIT: 0
+
+COMMAND: bash /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/tests/.focused-teardown-1725.sh base /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/.fm-teardown-base-1725.sh
+
+CASE scout-clone-refresh
+local main: c6ab362e84ff6bb0757e6482e0dee13788f71a97
+origin actual main: b97a1dc80bdb66d04fb6933c7091cb7e5e4e8c1d
+task record: removed
+PRODUCT STDOUT
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8xumdb/scout-clone-refresh/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8xumdb/scout-clone-refresh/data/backlog.md). Update /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-teardown-check.4fvzk0_r/tmp/fm-teardown-tests.8xumdb/scout-clone-refresh/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+PRODUCT STDERR
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+not ok - scout-clone-refresh: the project clone's main was not fast-forwarded to origin (expected 'b97a1dc80bdb66d04fb6933c7091cb7e5e4e8c1d', got 'c6ab362e84ff6bb0757e6482e0dee13788f71a97')
+EXIT: 1
+
+Cleanup removes the transient runner, base script, and fixture root.
+
+SECOND TARGET RUN: resolve the fixture layout refusal.
+The initial secondmate run was blocked because its home was inside the code root.
+This run uses an unchanged temporary bin/ copy and sibling fixture home, all inside the worktree.
+TMPDIR=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-secondmate-check.7h_q0xd8/tmp
+FM_HOME=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-secondmate-check.7h_q0xd8/home
+PRECHECK COMMAND: bin/fm-remote-job-reap-orphans.sh --dry-run
+PRECHECK EXIT: 0
+COMMAND: bash /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/tests/.focused-secondmate-30429.sh /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-secondmate-check.7h_q0xd8/code
+ok - a secondmate retirement leaves the project clone's main untouched
+
+CASE secondmate-clone-untouched
+local main: a6873122e18d75e1f431b27839b95dc18191f2d7
+origin actual main: 6c6a97d8ae88b4af715c182f21cb82fd01d6fb18
+task record: removed
+secondmate home: removed
+PRODUCT STDOUT
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.focused-secondmate-check.7h_q0xd8/tmp/fm-teardown-tests.T457Ac/secondmate-clone-untouched/wt)
+PRODUCT STDERR
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXIT: 0
+Cleanup verified: temporary runner and fixture/code copy removed.

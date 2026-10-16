@@ -1,0 +1,126 @@
+Live secondmate retirement through unchanged product CLI. Real Git and private tmux. No mocks, no gate bypass, no FM_*_OVERRIDE.
+Source bin/ copied unchanged from target commit 6406aab2b2ddbeb4e89b9d7980a18d69bed29829.
+FM_HOME=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent
+TMPDIR=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/tmp
+XDG_STATE_HOME=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/xdg-state
+
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/fm-remote-job-reap-orphans.sh --dry-run
+[exit 0]
+
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/code/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent
+[exit 0]
+
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/code/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate
+[exit 0]
+
+$ git init -q -b main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer add payload.txt
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer commit -q -m baseline
+[exit 0]
+
+$ git clone -q --bare /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/origin.git
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer remote add origin /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/origin.git
+[exit 0]
+
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent/projects/secondmate-project
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent/projects/secondmate-project rev-parse main
+a2dc7292993bee19aa9502a5d56ef8498f7b7cdc
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer add payload.txt
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer commit -q -m 'advance upstream main'
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/writer push -q origin main
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/origin.git rev-parse main
+5de41116d7e5507451b8a2bc674521a8404322a6
+[exit 0]
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 -f /dev/null new-session -d -s fm-lab-secondmate -n control -c /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent /bin/sh
+[exit 0]
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 new-window -d -t fm-lab-secondmate -n fm-fm-lab-retire-secondmate -c /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate /bin/sh
+[exit 0]
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 display-message -p -t fm-lab-secondmate:control '#{pid}'
+88302
+[exit 0]
+TMUX=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623,88302,0
+Persisted input metadata:
+window=fm-lab-secondmate:fm-fm-lab-retire-secondmate
+endpoint_task_id=fm-lab-retire-secondmate
+worktree=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate
+project=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent/projects/secondmate-project
+kind=secondmate
+mode=secondmate
+backend=tmux
+spawn_gen=live-secondmate-retirement
+home=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate
+Persisted input registry:
+- fm-lab-retire-secondmate - Disposable validation home (home: /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate; scope: Isolated retirement check; projects: secondmate-project; added 2026-10-16)
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 list-windows -t fm-lab-secondmate -F '#{window_name} #{pane_current_command}'
+control bash
+fm-fm-lab-retire-secondmate bash
+[exit 0]
+
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/fm-remote-job-reap-orphans.sh --dry-run
+[exit 0]
+
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/code/bin/fm-teardown.sh fm-lab-retire-secondmate
+teardown fm-lab-retire-secondmate complete (window fm-lab-secondmate:fm-fm-lab-retire-secondmate, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/secondmate)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/parent/projects/secondmate-project rev-parse main
+a2dc7292993bee19aa9502a5d56ef8498f7b7cdc
+[exit 0]
+
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.secondmate-live.wwkt4div/origin.git rev-parse main
+5de41116d7e5507451b8a2bc674521a8404322a6
+[exit 0]
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 list-windows -t fm-lab-secondmate -F '#{window_name}'
+control
+[exit 0]
+
+OBSERVED STATE
+{
+  "exit": 0,
+  "before_main": "a2dc7292993bee19aa9502a5d56ef8498f7b7cdc",
+  "upstream_main": "5de41116d7e5507451b8a2bc674521a8404322a6",
+  "after_main": "a2dc7292993bee19aa9502a5d56ef8498f7b7cdc",
+  "after_upstream_main": "5de41116d7e5507451b8a2bc674521a8404322a6",
+  "secondmate_home_removed": true,
+  "task_metadata_removed": true,
+  "registry_entry_removed": true,
+  "endpoint_removed": true,
+  "control_window_retained": true,
+  "result": "pass",
+  "live": true
+}
+
+$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.sm87623 kill-server
+[exit 0]
+Cleanup: private tmux server stopped; temporary code copy, homes, repositories, and socket removed.
