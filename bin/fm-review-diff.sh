@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Review a crewmate branch against the authoritative base.
 #
-# Pooled project clones do not keep their local default branch current, so this
-# helper compares remote-backed projects against origin/<default> after fetching
-# the default branch, and local-only projects against the local default branch.
+# A pooled clone's local default branch can lag origin between refreshes.
+# For remote-backed projects, this helper fetches the default branch and compares
+# against origin/<default>.
+# For local-only projects, it compares against the local default branch.
 # A task whose meta records base_branch= (bin/fm-spawn.sh) compares against
 # origin/<base_branch> instead of the default branch.
 # When state/<id>.meta records pr= as a GitHub pull-request URL, a Forgejo
