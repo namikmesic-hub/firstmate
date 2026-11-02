@@ -1,0 +1,39 @@
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh name cleanup-refresh
+fm-lab-cleanup-refresh-13144-4717
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh provision fm-lab-cleanup-refresh-13144-4717
+
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 status --json
+{"client":{"version":"0.9.3","channel":"stable","protocol":22,"endpoint_protocol_generation":1,"endpoint_capabilities":["surface_interest","presentation_effects_fence","health_check"],"remote_host_bridge":true,"remote_bridge_idle_timeout":true,"binary":"/opt/homebrew/bin/herdr","session":"fm-lab-cleanup-refresh-13144-4717"},"server":{"status":"running","running":true,"version":"0.9.3","protocol":22,"capabilities":{"live_handoff":true,"detached_server_daemon":false,"endpoint_protocol_generation":1,"surface_interest":true,"health_check":true,"ssh_agent_registration":true},"compatible":true,"endpoint_compatible":true,"socket":"/Users/namikmesic/.config/herdr/sessions/fm-lab-cleanup-refresh-13144-4717/herdr.sock","session":"fm-lab-cleanup-refresh-13144-4717","restart_needed":false,"server_binary_stale":false},"update":{"restart_needed":false,"server_binary_stale":false}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh teardown fm-lab-cleanup-refresh-13144-4717
+
+exit=0
+Named lab removed; default-session tripwire unchanged.
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh name cleanup-refresh
+fm-lab-cleanup-refresh-53979-20503
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh provision fm-lab-cleanup-refresh-53979-20503
+
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-53979-20503 status --json
+{"client":{"version":"0.9.3","channel":"stable","protocol":22,"endpoint_protocol_generation":1,"endpoint_capabilities":["surface_interest","presentation_effects_fence","health_check"],"remote_host_bridge":true,"remote_bridge_idle_timeout":true,"binary":"/opt/homebrew/bin/herdr","session":"fm-lab-cleanup-refresh-53979-20503"},"server":{"status":"running","running":true,"version":"0.9.3","protocol":22,"capabilities":{"live_handoff":true,"detached_server_daemon":false,"endpoint_protocol_generation":1,"surface_interest":true,"health_check":true,"ssh_agent_registration":true},"compatible":true,"endpoint_compatible":true,"socket":"/Users/namikmesic/.config/herdr/sessions/fm-lab-cleanup-refresh-53979-20503/herdr.sock","session":"fm-lab-cleanup-refresh-53979-20503","restart_needed":false,"server_binary_stale":false},"update":{"restart_needed":false,"server_binary_stale":false}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh teardown fm-lab-cleanup-refresh-53979-20503
+
+exit=0
+Named lab removed; default-session tripwire unchanged.
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh name cleanup-refresh
+fm-lab-cleanup-refresh-70317-4141
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh provision fm-lab-cleanup-refresh-70317-4141
+
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-70317-4141 status --json
+{"client":{"version":"0.9.3","channel":"stable","protocol":22,"endpoint_protocol_generation":1,"endpoint_capabilities":["surface_interest","presentation_effects_fence","health_check"],"remote_host_bridge":true,"remote_bridge_idle_timeout":true,"binary":"/opt/homebrew/bin/herdr","session":"fm-lab-cleanup-refresh-70317-4141"},"server":{"status":"running","running":true,"version":"0.9.3","protocol":22,"capabilities":{"live_handoff":true,"detached_server_daemon":false,"endpoint_protocol_generation":1,"surface_interest":true,"health_check":true,"ssh_agent_registration":true},"compatible":true,"endpoint_compatible":true,"socket":"/Users/namikmesic/.config/herdr/sessions/fm-lab-cleanup-refresh-70317-4141/herdr.sock","session":"fm-lab-cleanup-refresh-70317-4141","restart_needed":false,"server_binary_stale":false},"update":{"restart_needed":false,"server_binary_stale":false}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh teardown fm-lab-cleanup-refresh-70317-4141
+
+exit=0
+Named lab removed; default-session tripwire unchanged.

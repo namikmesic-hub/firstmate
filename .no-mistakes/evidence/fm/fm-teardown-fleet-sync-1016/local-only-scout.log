@@ -1,0 +1,139 @@
+Scenario: local-only-scout
+Real fm-teardown, Git, Treehouse, and named Herdr lab. No service stubs.
+Session: fm-lab-cleanup-refresh-13144-4717
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout
+exit=0
+$ git init -q --bare --initial-branch=main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/origin.git
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed
+
+stderr:
+warning: You appear to have cloned an empty repository.
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed commit -qm baseline
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed push -q origin main
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo rev-parse main
+99336c3c1d662b854eb2f627f88e415bd664b568
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed commit -qm 'upstream advance'
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/seed push -q origin main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/origin.git rev-parse main
+6e371c3ae2bb7ee5e8a13137b542860ccc03901f
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo fetch -q origin
+
+exit=0
+$ treehouse get --lease --json --lease-holder local-only-scout
+{"path":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo","lease_id":"d50940b24b2cbaf0ed858f802d37c91d","lease_holder":"local-only-scout","leased_at":"2026-11-02T00:57:10.328731+01:00"}
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo. Run 'treehouse return ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo' to release it.
+exit=0
+Treehouse lease={"path": "/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo", "lease_id": "d50940b24b2cbaf0ed858f802d37c91d", "lease_holder": "local-only-scout", "leased_at": "2026-11-02T00:57:10.328731+01:00"}
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo diff -- .gitignore
+diff --git a/.gitignore b/.gitignore
+index fff386a..cdb97d4 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ .treehouse/
++/.treehouse
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo restore -- .gitignore
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo checkout -qb fm/local-only-scout origin/main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo rev-parse HEAD
+99336c3c1d662b854eb2f627f88e415bd664b568
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo rev-parse main
+99336c3c1d662b854eb2f627f88e415bd664b568
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo status --porcelain
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo symbolic-ref --quiet --short HEAD
+main
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 workspace create --cwd /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo --label fm-task-local-only-scout --no-focus
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo","focused":true,"foreground_cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo","pane_id":"w3:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":40},"tab_id":"w3:t1","terminal_id":"term_65f3fc99dbad83","workspace_id":"w3"},"tab":{"agent_status":"unknown","focused":true,"label":"1","number":1,"pane_count":1,"tab_id":"w3:t1","workspace_id":"w3"},"type":"workspace_created","workspace":{"active_tab_id":"w3:t1","agent_status":"unknown","focused":true,"label":"fm-task-local-only-scout","number":1,"pane_count":1,"tab_count":1,"workspace_id":"w3"}}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-teardown.sh task-local-only-scout
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+demo: skipped: local-only project
+teardown task-local-only-scout complete (window fm-lab-cleanup-refresh-13144-4717:w3:p1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo)
+Backlog: task-local-only-scout just finished (this home keeps no markdown backlog at /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/data/backlog.md). Update /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/data/backlog.md - move task-local-only-scout to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+stderr:
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: reaping leaked worktree process(es) for task-local-only-scout: 21191
+teardown: force-killing leaked worktree process(es) for task-local-only-scout: 21191
+exit=0
+cleanup exit status: actual=0, expected=0
+task metadata retired: actual=False, expected=False
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 pane get w3:p1
+
+stderr:
+{"error":{"code":"pane_not_found","message":"pane w3:p1 not found"},"id":"cli:pane:get"}
+exit=1
+recorded task pane closed: actual=1, expected=1
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo rev-parse main
+99336c3c1d662b854eb2f627f88e415bd664b568
+exit=0
+clone main unchanged: actual='99336c3c1d662b854eb2f627f88e415bd664b568', expected='99336c3c1d662b854eb2f627f88e415bd664b568'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo rev-parse HEAD
+99336c3c1d662b854eb2f627f88e415bd664b568
+exit=0
+clone HEAD unchanged: actual='99336c3c1d662b854eb2f627f88e415bd664b568', expected='99336c3c1d662b854eb2f627f88e415bd664b568'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo status --porcelain
+
+exit=0
+operator working files unchanged: actual='', expected=''
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo symbolic-ref --short HEAD
+main
+exit=0
+checked-out branch unchanged: actual='main', expected='main'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo status --porcelain
+
+exit=0
+returned pool slot is clean: actual='', expected=''
+$ treehouse status
+1     available    ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/local-only-scout/projects/demo/.treehouse/demo-2d3625/1/demo
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+exit=0
+RESULT: PASS

@@ -1,0 +1,98 @@
+Scenario: secondmate-exclusion
+Real fm-teardown, Git, Treehouse, and named Herdr lab. No service stubs.
+Session: fm-lab-cleanup-refresh-13144-4717
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion
+exit=0
+$ git init -q --bare --initial-branch=main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/origin.git
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed
+
+stderr:
+warning: You appear to have cloned an empty repository.
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed commit -qm baseline
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed push -q origin main
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo rev-parse main
+672527ae84e1b971217680249a6b2fb9aa5cafe8
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed commit -qm 'upstream advance'
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/seed push -q origin main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/origin.git rev-parse main
+c3fc34b6d8c652d1bdd6cfd1fae3a10ebc6d2d1f
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo fetch -q origin
+
+exit=0
+$ treehouse get --lease --json --lease-holder secondmate-exclusion
+{"path":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo/.treehouse/demo-71eba4/1/demo","lease_id":"115ad63439cec2a7f89cce8b053f54b7","lease_holder":"secondmate-exclusion","leased_at":"2026-11-02T00:57:20.317077+01:00"}
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo/.treehouse/demo-71eba4/1/demo. Run 'treehouse return ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo/.treehouse/demo-71eba4/1/demo' to release it.
+exit=0
+Treehouse lease={"path": "/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo/.treehouse/demo-71eba4/1/demo", "lease_id": "115ad63439cec2a7f89cce8b053f54b7", "lease_holder": "secondmate-exclusion", "leased_at": "2026-11-02T00:57:20.317077+01:00"}
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo diff -- .gitignore
+diff --git a/.gitignore b/.gitignore
+index fff386a..cdb97d4 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ .treehouse/
++/.treehouse
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo restore -- .gitignore
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo/.treehouse/demo-71eba4/1/demo checkout -qb fm/secondmate-exclusion origin/main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo rev-parse HEAD
+672527ae84e1b971217680249a6b2fb9aa5cafe8
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo rev-parse main
+672527ae84e1b971217680249a6b2fb9aa5cafe8
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo status --porcelain
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/projects/demo symbolic-ref --quiet --short HEAD
+main
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 workspace create --cwd /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/secondmate-home --label fm-task-secondmate-exclusion --no-focus
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/secondmate-home","focused":true,"foreground_cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/secondmate-home","pane_id":"w5:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":40},"tab_id":"w5:t1","terminal_id":"term_65f3fca361ff45","workspace_id":"w5"},"tab":{"agent_status":"unknown","focused":true,"label":"1","number":1,"pane_count":1,"tab_id":"w5:t1","workspace_id":"w5"},"type":"workspace_created","workspace":{"active_tab_id":"w5:t1","agent_status":"unknown","focused":true,"label":"fm-task-secondmate-exclusion","number":1,"pane_count":1,"tab_count":1,"workspace_id":"w5"}}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-teardown.sh task-secondmate-exclusion --force
+
+stderr:
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: unsafe secondmate home removal target /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/secondmate-exclusion/secondmate-home is inside the active firstmate home
+exit=1
+cleanup exit status: actual=1, expected=0

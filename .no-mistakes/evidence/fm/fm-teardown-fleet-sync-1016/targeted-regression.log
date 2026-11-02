@@ -1,0 +1,5 @@
+ok - a scout teardown fast-forwards the project clone's main to origin
+ok - a secondmate retirement leaves the project clone's main untouched
+ok - no-mistakes worktree with HEAD on origin is torn down (no regression)
+ok - local-only worktree with work merged into local main is torn down (no regression)
+ok - dirty worktree is refused even when its committed work has landed (dirty always wins)

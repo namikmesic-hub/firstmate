@@ -1,0 +1,145 @@
+Scenario: diverged-clone
+Real fm-teardown, Git, Treehouse, and named Herdr lab. No service stubs.
+Session: fm-lab-cleanup-refresh-70317-4141
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone
+exit=0
+$ git init -q --bare --initial-branch=main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/origin.git
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed
+
+stderr:
+warning: You appear to have cloned an empty repository.
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed commit -qm baseline
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed push -q origin main
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo rev-parse main
+6cf84f9526e0f565f1c6ceda10acbd3c7b1cd794
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed commit -qm 'upstream advance'
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/seed push -q origin main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/origin.git rev-parse main
+e80b317a5dccf05133bae7ad795e68b5cdb7f2a3
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo fetch -q origin
+
+exit=0
+$ treehouse get --lease --json --lease-holder diverged-clone
+{"path":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo","lease_id":"9d6a7636f08b403c650a21b1a5a283ba","lease_holder":"diverged-clone","leased_at":"2026-11-02T00:58:51.978427+01:00"}
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo. Run 'treehouse return ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo' to release it.
+exit=0
+Treehouse lease={"path": "/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo", "lease_id": "9d6a7636f08b403c650a21b1a5a283ba", "lease_holder": "diverged-clone", "leased_at": "2026-11-02T00:58:51.978427+01:00"}
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo diff -- .gitignore
+diff --git a/.gitignore b/.gitignore
+index fff386a..cdb97d4 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ .treehouse/
++/.treehouse
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo restore -- .gitignore
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo checkout -qb fm/diverged-clone origin/main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo commit -qm 'operator local commit'
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo rev-parse HEAD
+83534a2dc2186981fc03ccc27e8475ffca531b89
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo rev-parse main
+83534a2dc2186981fc03ccc27e8475ffca531b89
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo status --porcelain
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo symbolic-ref --quiet --short HEAD
+main
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-70317-4141 workspace create --cwd /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo --label fm-task-diverged-clone --no-focus
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo","focused":true,"foreground_cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo","pane_id":"w4:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":40},"tab_id":"w4:t1","terminal_id":"term_65f3fcfad7b5c4","workspace_id":"w4"},"tab":{"agent_status":"unknown","focused":true,"label":"1","number":1,"pane_count":1,"tab_id":"w4:t1","workspace_id":"w4"},"type":"workspace_created","workspace":{"active_tab_id":"w4:t1","agent_status":"unknown","focused":true,"label":"fm-task-diverged-clone","number":1,"pane_count":1,"tab_count":1,"workspace_id":"w4"}}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-teardown.sh task-diverged-clone
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+demo: STUCK: on diverged main, 1 commits behind origin/main - needs attention
+teardown task-diverged-clone complete (window fm-lab-cleanup-refresh-70317-4141:w4:p1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo)
+Backlog: task-diverged-clone just finished (this home keeps no markdown backlog at /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/data/backlog.md). Update /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/data/backlog.md - move task-diverged-clone to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+stderr:
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+teardown: reaping leaked worktree process(es) for task-diverged-clone: 82000
+teardown: force-killing leaked worktree process(es) for task-diverged-clone: 82000
+exit=0
+cleanup exit status: actual=0, expected=0
+task metadata retired: actual=False, expected=False
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-70317-4141 pane get w4:p1
+
+stderr:
+{"error":{"code":"pane_not_found","message":"pane w4:p1 not found"},"id":"cli:pane:get"}
+exit=1
+recorded task pane closed: actual=1, expected=1
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo rev-parse main
+83534a2dc2186981fc03ccc27e8475ffca531b89
+exit=0
+clone main unchanged: actual='83534a2dc2186981fc03ccc27e8475ffca531b89', expected='83534a2dc2186981fc03ccc27e8475ffca531b89'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo rev-parse HEAD
+83534a2dc2186981fc03ccc27e8475ffca531b89
+exit=0
+clone HEAD unchanged: actual='83534a2dc2186981fc03ccc27e8475ffca531b89', expected='83534a2dc2186981fc03ccc27e8475ffca531b89'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo status --porcelain
+
+exit=0
+operator working files unchanged: actual='', expected=''
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo symbolic-ref --short HEAD
+main
+exit=0
+checked-out branch unchanged: actual='main', expected='main'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo status --porcelain
+
+exit=0
+returned pool slot is clean: actual='', expected=''
+$ treehouse status
+1     available    ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-lzr07ats/diverged-clone/projects/demo/.treehouse/demo-cffe37/1/demo
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+exit=0
+RESULT: PASS

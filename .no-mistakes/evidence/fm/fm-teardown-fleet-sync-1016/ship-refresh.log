@@ -1,166 +1,131 @@
-$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh
-/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh
-[exit 0]
-$ git init --bare --initial-branch=main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git
-Initialized empty Git repository in /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git/
-[exit 0]
-$ git clone /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed
-Cloning into '/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed'...
+Scenario: ship-refresh
+Real fm-teardown, Git, Treehouse, and named Herdr lab. No service stubs.
+Session: fm-lab-cleanup-refresh-13144-4717
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-lab-home.sh create /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh
+/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh
+exit=0
+$ git init -q --bare --initial-branch=main /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/origin.git
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed
+
+stderr:
 warning: You appear to have cloned an empty repository.
-done.
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed add .
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed commit -m Baseline
-[main (root-commit) d0bb876] Baseline
- 3 files changed, 4 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 readme.txt
- create mode 100644 treehouse.toml
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed push origin main
-To /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git
- * [new branch]      main -> main
-[exit 0]
-$ git clone /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo
-Cloning into '/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo'...
-done.
-[exit 0]
-$ treehouse get --lease --lease-holder lab-fleet-sync
-A new version of treehouse is available: v2.1.1 → v3.1.4
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed commit -qm baseline
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed push -q origin main
+
+exit=0
+$ git clone -q /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/origin.git /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo rev-parse main
+78c90c28ebe3c46bee68b0670f15030ca37be962
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed add .
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed commit -qm 'upstream advance'
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/seed push -q origin main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/origin.git rev-parse main
+7387f5524c59c9a2262ef9cfb91727dcb0ccc21f
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo fetch -q origin
+
+exit=0
+$ treehouse get --lease --json --lease-holder ship-refresh
+{"path":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo","lease_id":"fb839d20fb4fd07897fc7fbd29afc4f9","lease_holder":"ship-refresh","leased_at":"2026-11-02T00:57:05.755695+01:00"}
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
 Run "treehouse update" to update
 
 🌳 Setting up worktree...
-🌳 Leased worktree at ~/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo. Run 'treehouse return ~/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo' to release it.
-/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo switch -c fm/lab-scout
-Switched to a new branch 'fm/lab-scout'
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo status --porcelain
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed add remote.txt
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed commit -m Upstream merge
-[main 520a914] Upstream merge
- 1 file changed, 1 insertion(+)
- create mode 100644 remote.txt
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/seed push origin main
-To /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git
-   d0bb876..520a914  main -> main
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo fetch origin
-From /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin
-   d0bb876..520a914  main       -> origin/main
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo reset --hard origin/main
-HEAD is now at 520a914 Upstream merge
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo rev-parse main
-d0bb87682b94bfa8765c7ac93e99ab56143821d3
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/origin.git rev-parse main
-520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-[exit 0]
-$ tasks-axi add lab-scout Lab scout --kind ship --file /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md
-ok: added lab-scout (ship) -> Queued
-task:
-  id: lab-scout
-  title: Lab scout
-  state: queued
-  blocked: no
-  blocked_by: none
-  held: no
-  hold_reason: "-"
-  hold_kind: "-"
-  hold_until: "-"
-  kind: ship
-  repo: "-"
-  priority: "-"
-  created: 2026-10-16
-  closed: "-"
-  deps: none
-  links: none
-  body: ""
-help[2]:
-  - Run `tasks-axi start lab-scout --file=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md` to move it to in flight
-  - Run `tasks-axi block lab-scout --by <other> --file=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md` to record a dependency
-[exit 0]
-$ tasks-axi start lab-scout --file /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md
-ok: start lab-scout -> In flight
-help[1]:
-  - Run `tasks-axi done lab-scout --pr <url> --file=/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md` when it ships
-[exit 0]
-$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.fmsock new-window -d -t fm-lab-fleet -n fm-lab-scout -c /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo /bin/sh
-[exit 0]
-$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.fmsock list-windows -t fm-lab-fleet -F #{window_name} #{pane_current_path}
-keeper /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C
-fm-lab-scout /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo rev-parse HEAD
-520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-[exit 0]
-BEFORE main=d0bb87682b94bfa8765c7ac93e99ab56143821d3
-origin/main=520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-worker_HEAD=520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/fm-remote-job-reap-orphans.sh --dry-run
-[exit 0]
-$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/bin/fm-teardown.sh lab-scout
-fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh
+🌳 Leased worktree at ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo. Run 'treehouse return ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo' to release it.
+exit=0
+Treehouse lease={"path": "/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo", "lease_id": "fb839d20fb4fd07897fc7fbd29afc4f9", "lease_holder": "ship-refresh", "leased_at": "2026-11-02T00:57:05.755695+01:00"}
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo diff -- .gitignore
+diff --git a/.gitignore b/.gitignore
+index fff386a..cdb97d4 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ .treehouse/
++/.treehouse
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo restore -- .gitignore
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo checkout -qb fm/ship-refresh origin/main
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo rev-parse HEAD
+78c90c28ebe3c46bee68b0670f15030ca37be962
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo rev-parse main
+78c90c28ebe3c46bee68b0670f15030ca37be962
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo status --porcelain
+
+exit=0
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo symbolic-ref --quiet --short HEAD
+main
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 workspace create --cwd /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo --label fm-task-ship-refresh --no-focus
+{"id":"cli:workspace:create","result":{"root_pane":{"agent_status":"unknown","cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo","focused":true,"foreground_cwd":"/Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo","pane_id":"w2:p1","revision":0,"scroll":{"max_offset_from_bottom":0,"offset_from_bottom":0,"viewport_rows":40},"tab_id":"w2:t1","terminal_id":"term_65f3fc957f4562","workspace_id":"w2"},"tab":{"agent_status":"unknown","focused":true,"label":"1","number":1,"pane_count":1,"tab_id":"w2:t1","workspace_id":"w2"},"type":"workspace_created","workspace":{"active_tab_id":"w2:t1","agent_status":"unknown","focused":true,"label":"fm-task-ship-refresh","number":1,"pane_count":1,"tab_count":1,"workspace_id":"w2"}}}
+exit=0
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-teardown.sh task-ship-refresh
+A new version of treehouse is available: v2.1.1 → v3.1.8
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+demo: synced 78c90c2..7387f55
+teardown task-ship-refresh complete (window fm-lab-cleanup-refresh-13144-4717:w2:p1, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo)
+Backlog: task-ship-refresh just finished (this home keeps no markdown backlog at /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/data/backlog.md). Update /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/data/backlog.md - move task-ship-refresh to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+stderr:
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
 ●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-teardown: reaping leaked worktree process(es) for lab-scout: 70861
-teardown: force-killing leaked worktree process(es) for lab-scout: 70861
-A new version of treehouse is available: v2.1.1 → v3.1.4
-Run "treehouse update" to update
+teardown: reaping leaked worktree process(es) for task-ship-refresh: 17678
+teardown: force-killing leaked worktree process(es) for task-ship-refresh: 17678
+exit=0
+cleanup exit status: actual=0, expected=0
+task metadata retired: actual=False, expected=False
+$ /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/bin/fm-herdr-lab.sh run fm-lab-cleanup-refresh-13144-4717 pane get w2:p1
 
-🌳 Worktree returned to pool.
-demo: synced d0bb876..520a914
-teardown lab-scout complete (window fm-lab-fleet:fm-lab-scout, worktree /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo)
-Backlog: lab-scout is closed in /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo rev-parse main
-520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-[exit 0]
-AFTER main=520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-Expected remote=520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-$ tmux -S /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.fmsock list-windows -t fm-lab-fleet -F #{window_name}
-keeper
-[exit 0]
+stderr:
+{"error":{"code":"pane_not_found","message":"pane w2:p1 not found"},"id":"cli:pane:get"}
+exit=1
+recorded task pane closed: actual=1, expected=1
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo rev-parse main
+7387f5524c59c9a2262ef9cfb91727dcb0ccc21f
+exit=0
+clone main equals upstream after cleanup: actual='7387f5524c59c9a2262ef9cfb91727dcb0ccc21f', expected='7387f5524c59c9a2262ef9cfb91727dcb0ccc21f'
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo status --porcelain
+
+exit=0
+clone remains clean: actual='', expected=''
+$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo status --porcelain
+
+exit=0
+returned pool slot is clean: actual='', expected=''
 $ treehouse status
-A new version of treehouse is available: v2.1.1 → v3.1.4
+1     available    ~/.no-mistakes/worktrees/5435c2ef752e/01M6CRCEPN9WG3X4ARY7F3SCTD/.cleanup-live-h3xcdi31/ship-refresh/projects/demo/.treehouse/demo-c33609/1/demo
+stderr:
+A new version of treehouse is available: v2.1.1 → v3.1.8
 Run "treehouse update" to update
-
-1     available    ~/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo
-[exit 0]
-$ tasks-axi show lab-scout --file /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/data/backlog.md
-task:
-  id: lab-scout
-  title: Lab scout
-  state: done
-  blocked: no
-  blocked_by: none
-  held: no
-  hold_reason: "-"
-  hold_kind: "-"
-  hold_until: "-"
-  kind: ship
-  repo: "-"
-  priority: "-"
-  created: "-"
-  closed: 2026-10-16
-  deps: none
-  links: none
-  body: ""
-[exit 0]
-$ git -C /Users/namikmesic/.no-mistakes/worktrees/5435c2ef752e/01M525K1EG77S2Q27ED04E5Y0C/.live-fleet-sync/ship-refresh/projects/demo/.treehouse/demo-f3ad2c/1/demo rev-parse main
-520a91419e7faec634ecdbbbc62e6e7dc5f4cbf4
-[exit 0]
-Shared pool main now equals origin/main.
-Scenario observations satisfied.
+exit=0
+RESULT: PASS
