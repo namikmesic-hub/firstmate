@@ -4,7 +4,12 @@
 # clear volatile state, and transition this home's backlog item for ship and
 # scout tasks before reporting success (a secondmate teardown transitions none,
 # since secondmates are not backlog items), then refresh/prune the project's
-# clone for PR-based ship tasks.
+# clone for ship and scout tasks on a remote-backed project. Scouts are included
+# because every pool worktree shares the clone's git directory, so a clone whose
+# local default branch lags origin shows every worker as behind until it is
+# fast-forwarded. A secondmate has no project clone in this home and a local-only
+# default branch is meant to be ahead of its remote, so both skip the refresh,
+# which is best effort and never changes the teardown's result or exit status.
 # An endpoint whose close could not do its job REFUSES before any record naming
 # it is removed: those records are the only thing that names what survived, so
 # reporting such a close as a completed cleanup strands the endpoint instead of
@@ -3922,7 +3927,8 @@ else
 fi
 fm_lock_release "$META_LOCK"
 META_LOCK_HELD=0
-if [ "$KIND" != scout ] && [ "$KIND" != secondmate ] && [ "$MODE" != local-only ]; then
+# Refresh the project clone for ship and scout tasks alike; the header owns why.
+if [ "$KIND" != secondmate ] && [ "$MODE" != local-only ]; then
   "$FM_ROOT/bin/fm-fleet-sync.sh" "$PROJ" || true
 fi
 # A secondmate retirement may remove the home containing an overridden control
